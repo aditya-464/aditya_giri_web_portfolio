@@ -1,9 +1,11 @@
 import './App.css';
-import "./portfolio.css"
-import { Hero } from './Hero';
-import { SectionName } from './SectionName';
-import { Practice } from './Practice';
-import { Navbar } from './Navbar';
+import "./components/portfolio.css"
+import { Hero } from './components/Hero';
+import { SectionName } from './components/SectionName';
+import { Practice } from './components/Practice';
+import { Navbar } from './components/Navbar';
+import { Project } from './components/Project';
+import { ProjectDetails } from './components/ProjectDetails';
 
 function App() {
   return (
@@ -11,7 +13,12 @@ function App() {
         {/* <Navbar></Navbar> */}
         {/* <Hero></Hero> */}
         {/* <SectionName></SectionName> */}
-        <Practice></Practice>
+        {/* <Project></Project> */}
+        <ProjectDetails></ProjectDetails>
+
+        <ProjectDetails></ProjectDetails>
+        <ProjectDetails></ProjectDetails>
+        {/* <Practice></Practice> */}
     </>
   );
 }

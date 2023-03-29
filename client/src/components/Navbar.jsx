@@ -1,6 +1,6 @@
 import { Box, Flex, HStack, Text } from '@chakra-ui/react'
 import React from 'react'
-import navIcon from "./agPortfolioWEBP.webp"
+import navIcon from "../images/agPortfolioWEBP.webp"
 
 export const Navbar = () => {
   return (

@@ -1,5 +1,5 @@
 import React from 'react'
-import heroIcon from "./agPortfolioWEBP.webp"
+import heroIcon from "../images/agPortfolioWEBP.webp"
 import { Box, Flex, HStack, Text } from '@chakra-ui/react'
 
 export const Hero = () => {

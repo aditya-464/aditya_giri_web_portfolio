@@ -6,7 +6,7 @@ export const SectionName = () => {
     <>
         <Box className='section-name-container'>
           <Flex justifyContent="center" alignItems="center" position="relative" top="30rem">
-            <Text className='section-name-text'>Projects</Text>
+            <Text className='section-name-text'>About Me</Text>
           </Flex>
         </Box>
     </>
