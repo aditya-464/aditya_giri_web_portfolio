@@ -22,11 +22,14 @@ function App() {
   return (
     <>
       {/* <Navbar></Navbar> */}
-      {/* <Hero></Hero> */}
-      <MemoizedSectionName name="About Me"></MemoizedSectionName>
+      <Hero></Hero>
+      
+      {/* <MemoizedSectionName name="About Me"></MemoizedSectionName> */}
+
       <MemoizedSectionName name="Projects"></MemoizedSectionName>
-      <MemoizedSectionName name="Skills"></MemoizedSectionName>
-      <MemoizedSectionName name="Contact"></MemoizedSectionName>
+      
+      {/* <MemoizedSectionName name="Skills"></MemoizedSectionName> */}
+      {/* <MemoizedSectionName name="Contact"></MemoizedSectionName> */}
 
 
       {/* <Project></Project> */}
@@ -35,8 +38,8 @@ function App() {
       {/* <Practice2></Practice2> */}
 
 
-      <Flex width="100%" height="100vh" flexDirection="row" backgroundColor="#FFE5B4">
-      </Flex>
+      {/* <Flex width="100%" height="100vh" flexDirection="row" backgroundColor="#FFE5B4">
+      </Flex> */}
 
       {/* <MemoizedProjectDetails number="01" title="Papyrus" techstack="React Js . Node Js . Express Js . MongoDB" description="Web application to post blogs and news
                             articles, along with relevant images"  img1={img1} img2={img2}></MemoizedProjectDetails> */}
@@ -46,9 +49,9 @@ function App() {
       {/* <Practice></Practice> */}
 
 
-      {/* <Suspense>
+      <Suspense>
         <MemoizedProject></MemoizedProject>
-      </Suspense> */}
+      </Suspense>
 
 
       {/* <MemoizedProjectDetailsRight number="01" title="Papyrus" techstack="React Js . Node Js . Express Js . MongoDB" description="Web application to post blogs and news

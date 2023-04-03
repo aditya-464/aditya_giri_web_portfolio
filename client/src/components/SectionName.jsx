@@ -17,7 +17,7 @@ export const SectionName = (props) => {
     const val1 = mySecRef1.current.getBoundingClientRect().top;
     const val2 = mySecRef2.current.getBoundingClientRect().top;
 
-    if (val1 >= 250 && val2 < 600) {
+    if (val1 <=250 && val2 < 600) {
       secFunc(true);
     }
 
