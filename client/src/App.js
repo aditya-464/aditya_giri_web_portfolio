@@ -1,7 +1,7 @@
 import './App.css';
 import "./components/portfolio.css"
 import { Hero } from './components/Hero';
-import { SectionName } from './components/SectionName';
+import { MemoizedSectionName } from './components/SectionName';
 import { Practice } from './components/Practice';
 import { Navbar } from './components/Navbar';
 import { MemoizedProjectDetails } from './components/ProjectDetails';
@@ -23,15 +23,20 @@ function App() {
     <>
       {/* <Navbar></Navbar> */}
       {/* <Hero></Hero> */}
-      {/* <SectionName></SectionName> */}
+      <MemoizedSectionName name="About Me"></MemoizedSectionName>
+      <MemoizedSectionName name="Projects"></MemoizedSectionName>
+      <MemoizedSectionName name="Skills"></MemoizedSectionName>
+      <MemoizedSectionName name="Contact"></MemoizedSectionName>
+
+
       {/* <Project></Project> */}
       {/* <Button width="10rem" height="5rem" fontSize="2rem" backgroundColor="blue" color="white" onClick={myFunc}>Click Me</Button> */}
 
       {/* <Practice2></Practice2> */}
 
 
-      {/* <Flex width="100%" height="100vh" flexDirection="row" backgroundColor="#FFE5B4">
-      </Flex> */}
+      <Flex width="100%" height="100vh" flexDirection="row" backgroundColor="#FFE5B4">
+      </Flex>
 
       {/* <MemoizedProjectDetails number="01" title="Papyrus" techstack="React Js . Node Js . Express Js . MongoDB" description="Web application to post blogs and news
                             articles, along with relevant images"  img1={img1} img2={img2}></MemoizedProjectDetails> */}
@@ -41,16 +46,16 @@ function App() {
       {/* <Practice></Practice> */}
 
 
-      <Suspense>
+      {/* <Suspense>
         <MemoizedProject></MemoizedProject>
-      </Suspense>
+      </Suspense> */}
 
 
       {/* <MemoizedProjectDetailsRight number="01" title="Papyrus" techstack="React Js . Node Js . Express Js . MongoDB" description="Web application to post blogs and news
                             articles, along with relevant images"  img1={img1} img2={img2}></MemoizedProjectDetailsRight> */}
 
-      <Flex width="100%" height="100vh" flexDirection="row" backgroundColor="#FFE5B4">
-      </Flex>
+      {/* <Flex width="100%" height="100vh" flexDirection="row" backgroundColor="#FFE5B4">
+      </Flex> */}
 
       {/* <Flex width="100%" height="100vh" flexDirection="row" backgroundColor="#FFE5B4">
       </Flex> */}

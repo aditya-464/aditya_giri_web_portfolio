@@ -51,6 +51,7 @@ export const Practice = () => {
 
         <Text className='new-text'>Hare Krishna!</Text>
         <Box className='markUp' ref={newDay()}></Box>
+        <Box width="100px" height="100px" backgroundColor="#8C7C74"></Box>
 
         {/* <div className='line'></div>
         <Box className='btn' onClick={btnFunc} width="100px">CLick me</Box>
