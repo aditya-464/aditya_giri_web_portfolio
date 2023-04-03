@@ -42,8 +42,8 @@ export const Project = () => {
         return cmp4Ref;
       case 5:
         return cmp5Ref;
-      case 6:
-        return cmp6Ref
+      default:
+        return cmp6Ref;
     }
   }
 
@@ -56,7 +56,7 @@ export const Project = () => {
     const val5 = cmp5Ref.current.getBoundingClientRect().top;
     const val6 = cmp6Ref.current.getBoundingClientRect().top;
 
-    if (val1 >= 550) {
+    if (val1 >= 350) {
       cmpFunc(false);
     }
 
@@ -90,9 +90,6 @@ export const Project = () => {
 
                   <Box className='project-inner-box'>
                     {(index % 2 === 0) ? (component === index) && showItems && <MemoizedProjectDetails number={value.projectNumber} title={value.projectTitle} techstack={value.projectTechstack} description={value.projectShortDesc} img1={img1} img2={img2}></MemoizedProjectDetails> : (component === index) && showItems && <MemoizedProjectDetailsRight number={value.projectNumber} title={value.projectTitle} techstack={value.projectTechstack} description={value.projectShortDesc} img1={img1} img2={img2}></MemoizedProjectDetailsRight>}
-
-
-                    {/* {(component === index) && showItems && <MemoizedProjectDetails number={value.projectNumber} title={value.projectTitle} techstack={value.projectTechstack} description={value.projectShortDesc} img1={img1} img2={img2}></MemoizedProjectDetails>} */}
                   </Box>
 
                   <Box ref={refValue(2 * index + 2)} className={`markDn mark-${2 * index + 2}`}></Box>
@@ -106,5 +103,5 @@ export const Project = () => {
   )
 }
 
-var MemoizedProject = null;
+var MemoizedProject;
 export default MemoizedProject = React.memo(Project);

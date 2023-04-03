@@ -13,6 +13,7 @@ import { lazy, Suspense } from 'react';
 import {MemoizedProjectDetailsRight} from './components/ProjectDetailsRight';
 import img1 from "./images/lp1.jfif";
 import img2 from "./images/lp2.jfif";
+import { About } from './components/About';
 
 const MemoizedProject = lazy(() => import('./components/Project'));
 
@@ -21,12 +22,14 @@ function App() {
 
   return (
     <>
+
+      <About></About>
       {/* <Navbar></Navbar> */}
-      <Hero></Hero>
+      {/* <Hero></Hero> */}
       
       {/* <MemoizedSectionName name="About Me"></MemoizedSectionName> */}
 
-      <MemoizedSectionName name="Projects"></MemoizedSectionName>
+      {/* <MemoizedSectionName name="Projects"></MemoizedSectionName> */}
       
       {/* <MemoizedSectionName name="Skills"></MemoizedSectionName> */}
       {/* <MemoizedSectionName name="Contact"></MemoizedSectionName> */}
@@ -49,9 +52,9 @@ function App() {
       {/* <Practice></Practice> */}
 
 
-      <Suspense>
+      {/* <Suspense>
         <MemoizedProject></MemoizedProject>
-      </Suspense>
+      </Suspense> */}
 
 
       {/* <MemoizedProjectDetailsRight number="01" title="Papyrus" techstack="React Js . Node Js . Express Js . MongoDB" description="Web application to post blogs and news
