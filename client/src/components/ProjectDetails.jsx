@@ -1,62 +1,54 @@
-import { Box, Button, Text } from '@chakra-ui/react'
+import { Box, Button, Flex, Text } from '@chakra-ui/react'
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types';
 
 
 export const ProjectDetails = (props) => {
-    const [showItems, setShowItems] = useState(false);
-    const {number, title, techstack, description} = props;
 
-    window.addEventListener("scroll", () => {
-        const component = document.querySelector(".mark");
-        const component2 = document.querySelector(".mark2");
-
-        const val = component.getBoundingClientRect().top;
-        const val2 = component2.getBoundingClientRect().top;
-
-        if(val2<=150 || val>=600){
-            setShowItems(false);
-        }
-        if ((val>=40 && val <= 96)) {
-            setShowItems(true);
-        }
-    });
-
+    const { number, title, techstack, description, img1, img2 } = props;
 
     return (
         <>
-            <Box className="project-details-conatiner text-align-right">
-                <Box className='mark'></Box>
-                {showItems && <span className="project-number animate-text">{number}</span>}
-                {showItems && <Box className="project-details-content">
-                    <Box className='project-wrapper-box'>
-                        <span className="project-title animate-text">{title}</span>
+            <Flex flexDirection="row" width="100vw" height="100vh">
+                <Box className="project-details-conatiner">
+                    {/* <Box className='mark'></Box> */}
+                    <span className="project-number animate-text">{number}</span>
+                    <Box className="project-details-content">
+                        <Box className='project-wrapper-box'>
+                            <span className="project-title animate-text">{title}</span>
+                        </Box>
+                        <Box className='project-wrapper-box'>
+                            <span className='project-techstack animate-text'>{techstack}</span>
+                        </Box>
+                        <Box className='project-wrapper-box'>
+                            <span className='project-description animate-text'>{description}</span>
+                        </Box>
+                        <button className='project-details-btn animate-text'>View More</button>
                     </Box>
-                    <Box className='project-wrapper-box'>
-                        <span className='project-techstack animate-text'>{techstack}</span>
-                    </Box>
-                    <Box className='project-wrapper-box'>
-                        <span className='project-description animate-text'>{description}</span>
-                    </Box>
-                    <button className='project-details-btn animate-text'>View More</button>
-                </Box>}
-                <Box className='mark2'></Box>
+                    {/* <Box className='mark2'></Box> */}
+                </Box>
 
-            </Box>
+                <Box className="project-images-container">
+                    <img src={img1} className="project-images-img" id='img1' alt='img1'></img>
+                    <img src={img2} className="project-images-img" id='img2' alt='img2'></img>
+                </Box>
+            </Flex>
         </>
     )
 }
 
 ProjectDetails.propTypes = {
-    number : PropTypes.string.isRequired,
-    title : PropTypes.string.isRequired,
-    techstack : PropTypes.string.isRequired,
-    description : PropTypes.string.isRequired,
+    number: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    techstack: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
 }
 
 ProjectDetails.defaultProps = {
-    number : "01",
-    title : "Title",
-    techstack : "Techstack",
-    description : "Description",
+    number: "01",
+    title: "Title",
+    techstack: "Techstack",
+    description: "Description",
 }
+
+export const MemoizedProjectDetails = React.memo(ProjectDetails);

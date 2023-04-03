@@ -4,24 +4,32 @@ import img1 from "../images/img1.webp"
 import img2 from "../images/img2.webp"
 import img3 from "../images/img3.webp"
 import { Parallax } from "react-parallax"
+import { useRef } from 'react'
 
 export const Practice = () => {
 
 
-  window.addEventListener("DOMContentLoaded", () => {
+  const cmp101Ref = useRef(null);
 
+  window.addEventListener("scroll",()=>{
+    console.log(cmp101Ref.current.getBoundingClientRect().top);
   })
-  const image1 = document.getElementById("img1");
-  const image2 = document.getElementById("img2");
-  const image3 = document.getElementById("img3");
+
+  const newDay = (val)=>{
+    return cmp101Ref;
+  }
+
+  // const image1 = document.getElementById("img1");
+  // const image2 = document.getElementById("img2");
+  // const image3 = document.getElementById("img3");
 
 
-  window.addEventListener("scroll", () => {
-    let value = window.scrollY;
-    image1.style.left = -(value * 1.25) + "px";
-    image2.style.left = -(value * 1) + "px";
-    image3.style.left = -(value * 0.75) + "px";
-  })
+  // window.addEventListener("scroll", () => {
+  //   let value = window.scrollY;
+  //   image1.style.left = -(value * 1.25) + "px";
+  //   image2.style.left = -(value * 1) + "px";
+  //   image3.style.left = -(value * 0.75) + "px";
+  // })
 
 
 
@@ -42,6 +50,7 @@ export const Practice = () => {
       <Box className='practice-container' >
 
         <Text className='new-text'>Hare Krishna!</Text>
+        <Box className='markUp' ref={newDay()}></Box>
 
         {/* <div className='line'></div>
         <Box className='btn' onClick={btnFunc} width="100px">CLick me</Box>
@@ -56,13 +65,6 @@ export const Practice = () => {
             <img src={img3} id="img3" alt="image_laptop"></img>
           </Box>
         </Box> */}
-
-        <Box width="900px" height="900px" border="2px solid red">
-          <Parallax className='p-img' bgImage={img1} strength={500}>
-
-          </Parallax>
-
-        </Box>
 
       </Box>
 
