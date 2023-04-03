@@ -33,19 +33,21 @@ function App() {
       {/* <Flex width="100%" height="100vh" flexDirection="row" backgroundColor="#FFE5B4">
       </Flex> */}
 
-      <MemoizedProjectDetails number="01" title="Papyrus" techstack="React Js . Node Js . Express Js . MongoDB" description="Web application to post blogs and news
-                            articles, along with relevant images"  img1={img1} img2={img2}></MemoizedProjectDetails>
+      {/* <MemoizedProjectDetails number="01" title="Papyrus" techstack="React Js . Node Js . Express Js . MongoDB" description="Web application to post blogs and news
+                            articles, along with relevant images"  img1={img1} img2={img2}></MemoizedProjectDetails> */}
 
       {/* <MemoizedProject></MemoizedProject> */}
 
       {/* <Practice></Practice> */}
 
 
-      {/* <Suspense>
+      <Suspense>
         <MemoizedProject></MemoizedProject>
-      </Suspense> */}
-      <MemoizedProjectDetailsRight number="01" title="Papyrus" techstack="React Js . Node Js . Express Js . MongoDB" description="Web application to post blogs and news
-                            articles, along with relevant images"  img1={img1} img2={img2}></MemoizedProjectDetailsRight>
+      </Suspense>
+
+
+      {/* <MemoizedProjectDetailsRight number="01" title="Papyrus" techstack="React Js . Node Js . Express Js . MongoDB" description="Web application to post blogs and news
+                            articles, along with relevant images"  img1={img1} img2={img2}></MemoizedProjectDetailsRight> */}
 
       <Flex width="100%" height="100vh" flexDirection="row" backgroundColor="#FFE5B4">
       </Flex>

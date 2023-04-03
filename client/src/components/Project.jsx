@@ -1,6 +1,7 @@
 import { Box } from '@chakra-ui/react'
 import React, { useState, useRef } from 'react'
 import { MemoizedProjectDetails } from './ProjectDetails'
+import { MemoizedProjectDetailsRight } from './ProjectDetailsRight'
 import img1 from "../images/lp1.jfif"
 import img2 from "../images/lp2.jfif"
 import { details } from "./ContentArray"
@@ -55,7 +56,7 @@ export const Project = () => {
     const val5 = cmp5Ref.current.getBoundingClientRect().top;
     const val6 = cmp6Ref.current.getBoundingClientRect().top;
 
-    if(val1>=550){
+    if (val1 >= 550) {
       cmpFunc(false);
     }
 
@@ -88,7 +89,10 @@ export const Project = () => {
                   <Box ref={refValue(2 * index + 1)} className={`markUp mark-${2 * index + 1}`}></Box>
 
                   <Box className='project-inner-box'>
-                    {(component === index) && showItems && <MemoizedProjectDetails number={value.projectNumber} title={value.projectTitle} techstack={value.projectTechstack} description={value.projectShortDesc} img1={img1} img2={img2}></MemoizedProjectDetails>}
+                    {(index % 2 === 0) ? (component === index) && showItems && <MemoizedProjectDetails number={value.projectNumber} title={value.projectTitle} techstack={value.projectTechstack} description={value.projectShortDesc} img1={img1} img2={img2}></MemoizedProjectDetails> : (component === index) && showItems && <MemoizedProjectDetailsRight number={value.projectNumber} title={value.projectTitle} techstack={value.projectTechstack} description={value.projectShortDesc} img1={img1} img2={img2}></MemoizedProjectDetailsRight>}
+
+
+                    {/* {(component === index) && showItems && <MemoizedProjectDetails number={value.projectNumber} title={value.projectTitle} techstack={value.projectTechstack} description={value.projectShortDesc} img1={img1} img2={img2}></MemoizedProjectDetails>} */}
                   </Box>
 
                   <Box ref={refValue(2 * index + 2)} className={`markDn mark-${2 * index + 2}`}></Box>
