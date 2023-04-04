@@ -186,23 +186,6 @@ html {
 
 }
 
-/* @keyframes slide_up {
-    0% {
-        bottom: 0;
-        height: 0%;
-    }
-
-    50% {
-        bottom: 0;
-        height: 100%;
-    }
-
-    100% {
-        top: 100%;
-        height: 0%;
-    }
-} */
-
 .new-text {
     animation: textHide 1ms linear forwards;
     animation-delay: 0.5s;
@@ -230,7 +213,7 @@ html {
 
 
 
-/* ABout */
+/* About */
 
 .about-container {
     width: 100%;
@@ -246,38 +229,33 @@ html {
     line-height: 125%;
 }
 
-.about-content-wrapper{
+.about-content-wrapper {
     width: 70%;
     min-height: 25vh;
     overflow: hidden;
 }
 
 @keyframes aboutSlide {
-    0%{
+    0% {
         transform: translateY(110%);
     }
-    100%{
+
+    100% {
         transform: translateY(0);
     }
 }
 
-.about-content{
+.about-content {
     animation: aboutSlide 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
     animation-delay: 0;
 }
 
-.markAbout1, .markAbout2{
+.markAbout1,
+.markAbout2 {
     width: 100%;
     height: 1px;
     background-color: var(--light-orange);
 }
-
-
-
-
-
-
-
 
 
 
@@ -303,6 +281,7 @@ html {
     height: 105vh;
     background-color: var(--light-orange);
 }
+
 
 
 
@@ -432,13 +411,10 @@ html {
     position: relative;
     width: 50vw;
     min-height: 100vh;
-    /* height: auto; */
-    /* height:max-content; */
     background-color: var(--light-orange);
     color: var(--dark-blue);
     overflow-x: hidden;
 }
-
 
 @keyframes imageSlide1 {
     0% {
@@ -480,8 +456,6 @@ html {
     animation-delay: 0;
 
 }
-
-
 
 
 
@@ -585,12 +559,83 @@ html {
     left: 35rem;
     animation: imageSlideRight2 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
     animation-delay: 0;
-
 }
 
 
 
 
+
+
+
+/* Skills */
+
+.skills-container{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--light-orange);
+    color: var(--dark-blue);
+    font-size: var(--h3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.markSkillUp, .markSkillDn{
+    width: 100%;
+    height: 1px;
+    background-color: var(--light-orange);
+    margin: 0.5rem 0;
+}
+
+.skills-content-wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 40vh;
+}
+
+.skills-content{
+    display: flex;
+    flex-direction: row;
+}
+
+@keyframes skillsSlide1 {
+    0%{
+        transform: translateX(120%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes skillsSlide2 {
+    0%{
+        transform: translateX(-120%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+
+.skills-content1, .skills-content2{
+    min-width: 30vw;
+    padding: 0 4rem;
+    overflow-x: hidden;
+}
+
+.skills-content1{
+    text-align: right;
+}
+
+.skills-text1{
+    animation: skillsSlide1 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    animation-delay: 0;
+}
+
+.skills-text2{
+    animation: skillsSlide2 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    animation-delay: 0;
+}
 
 
 
