@@ -15,6 +15,7 @@ import img1 from "./images/lp1.jfif";
 import img2 from "./images/lp2.jfif";
 import { MemoizedAbout } from './components/About';
 import { MemoizedSkills } from './components/Skills';
+import { MemoizedContact } from './components/Contact';
 
 const MemoizedProject = lazy(() => import('./components/Project'));
 
@@ -27,7 +28,8 @@ function App() {
       <Flex width="100%" height="100vh" flexDirection="row" backgroundColor="#FFE5B4">
       </Flex>
 
-      <MemoizedSkills></MemoizedSkills>
+      <MemoizedContact></MemoizedContact>
+      {/* <MemoizedSkills></MemoizedSkills> */}
       {/* <MemoizedAbout></MemoizedAbout> */}
       {/* <Navbar></Navbar> */}
       {/* <Hero></Hero> */}

@@ -17,11 +17,11 @@ export const Skills = () => {
         const val1 = skillRef1.current.getBoundingClientRect().top;
         const val2 = skillRef2.current.getBoundingClientRect().top;
 
-        if (val1 <=250 && val2 < 600) {
+        if (val1 <=250 && val2 <= 600) {
             skillFunc(true);
           }
       
-          if (val2 <= 100 || val1 > 650) {
+          if (val2 <= 100 || val1 >= 650) {
             skillFunc(false);
           }
     })
