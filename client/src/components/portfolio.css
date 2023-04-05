@@ -168,7 +168,7 @@ html {
     background-color: var(--light-orange);
 }
 
-.section-name-wrapper{
+.section-name-wrapper {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -177,7 +177,7 @@ html {
     align-items: center;
 }
 
-.section-name-text-wrapper{
+.section-name-text-wrapper {
     min-height: 25vh;
     padding: 0.5rem;
 }
@@ -303,7 +303,7 @@ html {
 
 .project-outer-box {
     width: 100vw;
-    min-height: 82vh;
+    min-height: 100vh;
     background-color: var(--light-orange);
 }
 
@@ -316,7 +316,7 @@ html {
 
 .project-inner-box {
     width: 100vw;
-    min-height: 80vh;
+    min-height: 100vh;
     background-color: var(--light-orange);
 }
 
@@ -330,13 +330,11 @@ html {
 .project-details-outer-container {
     display: flex;
     width: 100%;
-    min-height: 80vh;
-    /* border: 2px solid green; */
+    min-height: 100vh;
 }
 
-.project-details-conatiner {
+.project-details-container {
     width: 50vw;
-    height: 100%;
     height: auto;
     background-color: var(--light-orange);
     color: var(--dark-blue);
@@ -345,7 +343,7 @@ html {
     overflow-x: hidden;
 }
 
-.project-details-conatiner span {
+.project-details-container span {
     display: inline-block;
     padding: 0.3rem 0;
 }
@@ -447,7 +445,7 @@ html {
 .project-images-container {
     position: relative;
     width: 50vw;
-    min-height: 80vh;
+    min-height: 100vh;
     background-color: var(--light-orange);
     color: var(--dark-blue);
     overflow-x: hidden;
@@ -499,6 +497,13 @@ html {
 
 
 /* Project Details Right */
+
+.project-details-outer-container-right {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    /* border: 2px solid green; */
+}
 
 .project-details-content-right {
     margin-top: 10rem;
@@ -572,7 +577,7 @@ html {
 .project-images-container-right {
     position: relative;
     width: 50vw;
-    min-height: 80vh;
+    min-height: 100vh;
     background-color: var(--light-orange);
     color: var(--dark-blue);
     overflow-x: hidden;
@@ -903,7 +908,7 @@ html {
 
         --h0: 38px;
         --h1: 35px;
-        --h2: 24px;
+        --h2: 25px;
         --h3: 20px;
         --h4: 16px;
         --h5: 14px;
@@ -962,17 +967,112 @@ html {
 
     /* ProjectDetails */
 
-    .project-details-outer-container{
+    .project-details-outer-container {
         flex-direction: column;
+        background-color: var(--light-orange);
     }
 
-    .project-details-conatiner{
+    .project-details-container {
         width: 100%;
+        min-height: 30vh;
+        padding: 0 1.5rem 1rem 1.5rem;
+        line-height: normal;
     }
 
-    .project-images-container{
-        width: 100%;
+    .project-number {
+        margin-top: 3rem;
     }
+
+    .project-details-content {
+        margin-top: 4rem;
+        margin-left: 2rem;
+    }
+
+    .project-wrapper-box {
+        margin-bottom: 1.2rem;
+    }
+
+    .project-details-btn {
+        margin-top: 2.5rem;
+        width: 10rem;
+        height: 4rem;
+    }
+
+    .project-images-container {
+        width: 100%;
+        min-height: 30vh;
+        padding: 0 1.5rem;
+        overflow: hidden;
+    }
+
+    .project-images-container img {
+        width: 25rem;
+    }
+
+    .project-images-container #img1 {
+        top: 5rem;
+        left: 15%;
+    }
+
+    .project-images-container #img2 {
+        display: none;
+    }
+
+
+
+
+
+    /* Project Details Right */
+
+    .project-details-outer-container-right {
+        margin-top: 0;
+        flex-direction: column-reverse;
+        background-color: var(--light-orange);
+        justify-content: flex-end;
+    }
+
+    .text-align-right {
+        text-align: left;
+    }
+
+    .project-details-content-right {
+        margin-top: 4rem;
+        margin-left: 2rem;
+    }
+
+    .project-techstack {
+        font-size: var(--h4);
+    }
+
+    .animate-text-right::after {
+        animation: slide_new 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+        animation-delay: 0;
+    }
+
+    .project-images-container-right {
+        width: 100%;
+        min-height: 30vh;
+        padding: 0 1.5rem;
+        overflow: hidden;
+    }
+
+    .project-images-container-right img {
+        width: 25rem;
+    }
+
+    .project-images-container-right #img1 {
+        top: 5rem;
+        left: 15%;
+        animation: imageSlide1 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+        animation-delay: 0;
+    }
+
+    .project-images-container-right #img2 {
+        display: none;
+    }
+
+
+
 
 }
 

@@ -8,7 +8,7 @@ export const ProjectDetails = (props) => {
     return (
         <>
             <Box className='project-details-outer-container'>
-                <Box className="project-details-conatiner">
+                <Box className="project-details-container">
                     <span className="project-number animate-text">{number}</span>
                     <Box className="project-details-content">
                         <Box className='project-wrapper-box'>

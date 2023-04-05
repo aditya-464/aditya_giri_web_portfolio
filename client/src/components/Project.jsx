@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/react'
+import { Box, border } from '@chakra-ui/react'
 import React, { useState, useRef } from 'react'
 import { MemoizedProjectDetails } from './ProjectDetails'
 import { MemoizedProjectDetailsRight } from './ProjectDetailsRight'
@@ -51,12 +51,12 @@ export const Project = () => {
       cmpFunc(false);
       cmpVal(-1);
     }
-    if ((val1 <= 120 && val2 >= 300) || (val3 <= 120 && val4 >= 300) || (val5 <= 120 && val6 >= 300)) {
+    if ((val1 <= 150 && val2 >= 300) || (val3 <= 150 && val4 >= 300) || (val5 <= 150 && val6 >= 300)) {
       cmpFunc(true);
-      if (val1 <= 120 && val2 >= 300) {
+      if (val1 <= 150 && val2 >= 300) {
         cmpVal(0);
       }
-      else if (val3 <= 120 && val4 >= 300) {
+      else if (val3 <= 150 && val4 >= 300) {
         cmpVal(1);
       }
       else {
