@@ -23,13 +23,13 @@ export const SectionName = (props) => {
   return (
     <>
       <Box className='section-name-container' id='section-name'>
-        <Flex flexDirection="column" justifyContent="center" alignItems="center" width="100%" height="100%">
+        <Box className='section-name-wrapper'>
           <Box ref={mySecRef1} className='markSec1'></Box>
-          <Text className="section-name-text-wrapper" height="25vh" padding="0.5rem">
+          <Text className="section-name-text-wrapper">
             {showItem && <span className='section-name-text new-text'>{props.name}</span>}
           </Text>
           <Box ref={mySecRef2} className='markSec2'></Box>
-        </Flex>
+        </Box>
       </Box>
     </>
   )

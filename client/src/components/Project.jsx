@@ -47,16 +47,16 @@ export const Project = () => {
     const val4 = cmp4Ref.current.getBoundingClientRect().top;
     const val5 = cmp5Ref.current.getBoundingClientRect().top;
     const val6 = cmp6Ref.current.getBoundingClientRect().top;
-    if (val1 >= 350) {
+    if (val1 >= 600) {
       cmpFunc(false);
       cmpVal(-1);
     }
-    if ((val1 <= 100 && val2 >= 250) || (val3 <= 100 && val4 >= 250) || (val5 <= 100 && val6 >= 250)) {
+    if ((val1 <= 120 && val2 >= 300) || (val3 <= 120 && val4 >= 300) || (val5 <= 120 && val6 >= 300)) {
       cmpFunc(true);
-      if (val1 <= 100 && val2 >= 250) {
+      if (val1 <= 120 && val2 >= 300) {
         cmpVal(0);
       }
-      else if (val3 <= 100 && val4 >= 250) {
+      else if (val3 <= 120 && val4 >= 300) {
         cmpVal(1);
       }
       else {

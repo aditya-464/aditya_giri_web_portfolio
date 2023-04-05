@@ -8,7 +8,7 @@ export const ProjectDetailsRight = (props) => {
 
     return (
         <>
-            <Flex flexDirection="row" width="100vw" height="100vh">
+            <Box className='project-details-outer-container'>
                 <Box className="project-images-container-right">
                     <img src={img1} className="project-images-img" id='img1' alt='img1'></img>
                     <img src={img2} className="project-images-img" id='img2' alt='img2'></img>
@@ -28,7 +28,7 @@ export const ProjectDetailsRight = (props) => {
                         <button className='project-details-btn animate-text-right'>View More</button>
                     </Box>
                 </Box>
-            </Flex>
+            </Box>
         </>
     )
 }
