@@ -4,7 +4,6 @@ import { Box, Flex, HStack, Text } from '@chakra-ui/react'
 
 export const Hero = () => {
   const [showItem, setShowItem] = useState(false);
-  const [dotVal, setDotVal] = useState(false);
 
   const heroFunc = (value) => {
     setShowItem(value);
@@ -14,10 +13,6 @@ export const Hero = () => {
       heroFunc(true);
     }, 100);
 
-    const width = window.innerWidth;
-    if (width <= 768) {
-      setDotVal(true);
-    }
   }, []);
 
   return (
@@ -30,7 +25,7 @@ export const Hero = () => {
               <br></br>
               <Box className='hero-text-job animate-hero-text'>
                 <span>Full Stack Developer</span>
-                {(dotVal === true) ? <span className='dot'> & </span> : <span className='dot'> . </span>}
+                <span className='dot'> . </span>
                 <span>UI/UX Designer</span>
               </Box>
             </Box>

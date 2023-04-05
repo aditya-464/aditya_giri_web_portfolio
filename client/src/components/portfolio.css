@@ -7,15 +7,6 @@
     font-family: 'Josefin Sans', sans-serif;
 }
 
-body {
-    overflow-x: hidden;
-}
-
-html {
-    font-size: 62.5%;
-    scroll-behavior: smooth;
-}
-
 :root {
     /* COLORS */
     --dark-blue: #231955;
@@ -36,7 +27,15 @@ html {
     --h6: 18px;
 }
 
+body {
+    overflow-x: hidden;
+    background-color: var(--light-orange);
+}
 
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
 
 
 
@@ -164,13 +163,13 @@ html {
 
 .section-name-container {
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     background-color: var(--light-orange);
 }
 
 .section-name-wrapper {
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -612,7 +611,7 @@ html {
 
 .skills-container {
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     background-color: var(--light-orange);
     color: var(--dark-blue);
     font-size: var(--h3);
@@ -924,31 +923,28 @@ html {
     }
 
     .hero-text-name {
+        font-size: 4rem;
         margin-bottom: 3rem;
     }
 
     .hero-text-job {
-        font-size: var(--h4);
+        font-size: var(--h3);
         display: flex;
         flex-direction: column;
     }
 
-    .hero-text-job span {
-        margin-bottom: 0.5rem;
-    }
-
     .hero-text-job .dot {
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.7rem;
     }
 
     .hero-icon {
-        padding: 3rem 0;
+        padding: 5rem 0;
         margin-bottom: 5rem;
     }
 
     .hero-icon img {
-        width: 12rem;
-        height: 12rem;
+        width: 14rem;
+        height: 14rem;
     }
 
 
@@ -1129,6 +1125,20 @@ html {
 
     .contact-form input{
         font-size: var(--h5);
+    }
+
+
+
+
+    /* Footer */
+
+    .footer-container{
+        width: 100%;
+        height: 5vh;
+    }
+
+    .footer-container a{
+        color: var(--dark-orange);
     }
 }
 

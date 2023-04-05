@@ -21,30 +21,13 @@ const MemoizedAbout = lazy(() => import('./components/About'));
 function App() {
   return (
     <>
-      {/* <Hero></Hero> */}
       {/* <MemoizedSectionName name="About Me"></MemoizedSectionName> */}
-      {/* <Suspense>
-        <MemoizedAbout></MemoizedAbout>
-      </Suspense> */}
-
-      {/* <Suspense>
-        <MemoizedProject></MemoizedProject>
-      </Suspense> */}
-
-      {/* <MemoizedProjectDetails number="01" title="Papyrus" techstack="React Js . Next Js. Node Js. Mongo DB" description="Web application to post blogs and news articles, along with relevant images" img1={img1} img2={img2}></MemoizedProjectDetails> */}
-      {/* <MemoizedProjectDetailsRight number="01" title="Papyrus" techstack="React Js . Express Js . Node Js . Mongo DB" description="Web application to post blogs and news articles, along with relevant images" img1={img1} img2={img2}></MemoizedProjectDetailsRight> */}
-
-      {/* <Suspense>
-        <MemoizedSkills></MemoizedSkills>
-      </Suspense> */}
-
-      <Suspense>
-        <MemoizedContact></MemoizedContact>
-        {/* <MemoizedFooter></MemoizedFooter> */}
-      </Suspense>
 
 
-      {/* <MemoizedSectionName name="About Me"></MemoizedSectionName>
+
+
+      <Hero></Hero>
+      <MemoizedSectionName name="About Me"></MemoizedSectionName>
       <Suspense>
         <MemoizedAbout></MemoizedAbout>
       </Suspense>
@@ -60,9 +43,9 @@ function App() {
       <Suspense>
         <MemoizedContact></MemoizedContact>
         <MemoizedFooter></MemoizedFooter>
-      </Suspense> */}
+      </Suspense>
 
-      <Box width="100%" height="100vh" backgroundColor="#FFE5B4"></Box>
+      {/* <Box width="100%" height="100vh" backgroundColor="#FFE5B4"></Box> */}
 
       {/* <Suspense>
         <MemoizedProject></MemoizedProject>
