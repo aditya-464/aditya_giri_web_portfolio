@@ -26,6 +26,9 @@ function App() {
 
 
 
+
+
+
       <Hero></Hero>
       <MemoizedSectionName name="About Me"></MemoizedSectionName>
       <Suspense>
@@ -44,6 +47,9 @@ function App() {
         <MemoizedContact></MemoizedContact>
         <MemoizedFooter></MemoizedFooter>
       </Suspense>
+
+
+
 
       {/* <Box width="100%" height="100vh" backgroundColor="#FFE5B4"></Box> */}
 
