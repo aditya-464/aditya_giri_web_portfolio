@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 
 
 export const ProjectDetailsRight = (props) => {
-
     const { number, title, techstack, description, img1, img2 } = props;
 
     return (
@@ -14,9 +13,7 @@ export const ProjectDetailsRight = (props) => {
                     <img src={img1} className="project-images-img" id='img1' alt='img1'></img>
                     <img src={img2} className="project-images-img" id='img2' alt='img2'></img>
                 </Box>
-
                 <Box className="project-details-conatiner text-align-right">
-                    {/* <Box className='mark'></Box> */}
                     <span className="project-number animate-text-right">{number}</span>
                     <Box className="project-details-content-right">
                         <Box className='project-wrapper-box'>
@@ -30,27 +27,21 @@ export const ProjectDetailsRight = (props) => {
                         </Box>
                         <button className='project-details-btn animate-text-right'>View More</button>
                     </Box>
-                    {/* <Box className='mark2'></Box> */}
                 </Box>
             </Flex>
         </>
     )
 }
-
-
 ProjectDetailsRight.propTypes = {
     number: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     techstack: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
 }
-
 ProjectDetailsRight.defaultProps = {
     number: "01",
     title: "Title",
     techstack: "Techstack",
     description: "Description",
 }
-
-
 export const MemoizedProjectDetailsRight = React.memo(ProjectDetailsRight);

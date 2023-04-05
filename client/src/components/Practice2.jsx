@@ -3,11 +3,9 @@ import React, {useState} from 'react'
 
 export const Practice2 = () => {
     const [showItem, setShowItem] = useState(false);
-
     window.addEventListener("scroll", ()=>{
         const box = document.querySelector(".mark");
         let val = box.getBoundingClientRect().top;
-        // box.style.backgroundColor = "red"
         if(val<=100){
             setShowItem(true);
         }
@@ -15,7 +13,6 @@ export const Practice2 = () => {
             setShowItem(false);
         }
     })
-
 
   return (
     <>

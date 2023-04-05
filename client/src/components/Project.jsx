@@ -6,30 +6,21 @@ import img1 from "../images/lp1.jfif"
 import img2 from "../images/lp2.jfif"
 import { details } from "./ContentArray"
 
-
-
-
 export const Project = () => {
-
   const [showItems, setShowItems] = useState(false);
   const [component, setComponent] = useState(0);
-
   const cmp1Ref = useRef(null);
   const cmp2Ref = useRef(null);
   const cmp3Ref = useRef(null);
   const cmp4Ref = useRef(null);
   const cmp5Ref = useRef(null);
   const cmp6Ref = useRef(null);
-
-
   const cmpVal = (value) => {
     setComponent(value);
   }
-
   const cmpFunc = (value) => {
     setShowItems(value);
   }
-
   function refValue(value) {
     switch (value) {
       case 1:
@@ -46,41 +37,37 @@ export const Project = () => {
         return cmp6Ref;
     }
   }
-
   window.addEventListener("scroll", () => {
-
+    if(!cmp1Ref.current || !cmp2Ref.current || !cmp3Ref.current || !cmp4Ref.current || !cmp5Ref.current || !cmp6Ref.current){
+      return;
+    }
     const val1 = cmp1Ref.current.getBoundingClientRect().top;
     const val2 = cmp2Ref.current.getBoundingClientRect().top;
     const val3 = cmp3Ref.current.getBoundingClientRect().top;
     const val4 = cmp4Ref.current.getBoundingClientRect().top;
     const val5 = cmp5Ref.current.getBoundingClientRect().top;
     const val6 = cmp6Ref.current.getBoundingClientRect().top;
-
     if (val1 >= 350) {
       cmpFunc(false);
+      cmpVal(-1);
     }
-
-    if ((val1 <= 10 && val2 >= 200) || (val3 <= 10 && val4 >= 200) || (val5 <= 10 && val6 >= 200)) {
+    if ((val1 <= 100 && val2 >= 250) || (val3 <= 100 && val4 >= 250) || (val5 <= 100 && val6 >= 250)) {
       cmpFunc(true);
-
-      if (val1 <= 10 && val2 >= 200) {
+      if (val1 <= 100 && val2 >= 250) {
         cmpVal(0);
       }
-      else if (val3 <= 10 && val4 >= 200) {
+      else if (val3 <= 100 && val4 >= 250) {
         cmpVal(1);
       }
       else {
         cmpVal(2);
       }
     }
-
   });
-
-
 
   return (
     <>
-      <Box className='project-container'>
+      <Box className='project-container' id='project'>
         {
           details.map((value, index) => {
             return (
@@ -102,6 +89,5 @@ export const Project = () => {
     </>
   )
 }
-
 var MemoizedProject;
 export default MemoizedProject = React.memo(Project);

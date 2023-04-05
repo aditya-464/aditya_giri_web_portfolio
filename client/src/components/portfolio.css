@@ -81,13 +81,13 @@ html {
     font-weight: bolder;
     color: var(--light-orange);
     line-height: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero-content {
     width: 85%;
-    position: relative;
-    top: 25rem;
-    left: 9.6rem;
 }
 
 .hero-text {
@@ -99,24 +99,12 @@ html {
     margin-bottom: 1.5rem;
 }
 
-@keyframes heroIconSlide {
-    0% {
-        transform: translateY(120%);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
+.hero-text-name{
+    font-size: var(--h1);
 }
 
-.hero-icon {
-    overflow: hidden;
-}
-
-.hero-icon img {
-    width: 25rem;
-    animation: heroIconSlide 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-    animation-delay: 0;
+.hero-text-job{
+    font-size: var(--h3);
 }
 
 .animate-hero-text {
@@ -137,6 +125,27 @@ html {
     background-color: var(--light-orange);
     animation: slide_new 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
     animation-delay: 0s;
+}
+
+@keyframes heroIconSlide {
+    0% {
+        transform: translateY(120%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.hero-icon {
+    overflow: hidden;
+}
+
+.hero-icon img {
+    width: 30rem;
+    height: 30rem;
+    animation: heroIconSlide 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    animation-delay: 0;
 }
 
 
@@ -305,7 +314,6 @@ html {
     width: 100%;
     height: 1px;
     background-color: var(--light-orange);
-    margin-bottom: 0.5rem;
 }
 
 
@@ -584,7 +592,6 @@ html {
     width: 100%;
     height: 1px;
     background-color: var(--light-orange);
-    margin: 0.5rem 0;
 }
 
 .skills-content-wrapper{
@@ -656,7 +663,7 @@ html {
 .markContactUp, .markContactDn{
     width: 100%;
     height: 1px;
-    background-color: var(--light-blue);
+    background-color: var(--light-orange);
 }
 
 .contact-content{
@@ -735,6 +742,113 @@ html {
 .contact-icon:hover{
     color: var(--light-blue);
 }
+
+.contact-content2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: normal;
+    /* border: 2px solid green; */
+}
+
+@keyframes formSlide {
+    0%{
+        transform: translateX(300%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+.contact-form{
+    width: 55%;
+    animation: formSlide 2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    animation-delay: 0;
+    padding: 3rem;
+}
+
+.contact-form .contact-form-label{
+    font-size: var(--h4);
+    width: 100%;
+    display: block;
+    margin: 2rem 0;
+}
+
+.contact-form-text{
+    margin-bottom: 0.3rem;
+}
+
+.contact-form input{
+    font-size: var(--h6);
+    width: 100%;
+    padding: 1.2rem;
+    border: 1px solid var(--dark-blue);
+    border-radius: 0.2rem;
+}
+
+.contact-form textarea{
+    font-size: var(--h6);
+    width: 100%;
+    padding: 1.2rem;
+    border: 1px solid var(--dark-blue);
+    border-radius: 0.5rem;
+}
+
+.contact-form .contact-form-btn{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: var(--h5);
+    background-color: var(--dark-blue);
+    color: var(--light-orange);
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    transition-duration: 200ms;
+}
+
+.contact-form .contact-form-btn:hover{
+    background-color: var(--light-blue);
+}
+
+
+
+
+
+
+/* Footer */
+
+.footer-container{
+    width: 100%;
+    height: 10vh;
+    background-color: var(--dark-blue);
+    color: var(--light-orange);
+    font-size: var(--h6);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.footer-wrapper{
+    display: flex;
+}
+
+.footer-icon{
+    padding: 1.2rem 0;
+}
+
+.footer-text{
+    padding: 1rem;
+    letter-spacing: 0.1rem;
+}
+
+.footer-text span{
+    transition-duration: 200ms;
+}
+
+.footer-text span:hover{
+    color: var(--dark-orange);
+}
+
+
 
 
 
@@ -823,6 +937,8 @@ html {
 
 
 /* practice */
+
+
 .practice-container {
     padding: 3rem;
     width: 100%;
@@ -831,7 +947,7 @@ html {
     color: var(--dark-blue);
     font-size: var(--h1);
     overflow: hidden;
-    /* border: 22px solid white; */
+    border: 22px solid white;
 
 }
 
@@ -840,7 +956,7 @@ html {
     padding: 0.3rem;
     color: var(--dark-blue);
 
-    /* background-color: var(--dark-blue); */
+    background-color: var(--dark-blue);
 }
 
 
@@ -872,7 +988,7 @@ html {
 
 }
 
-/* @keyframes slide_new {
+@keyframes slide_new {
     0% {
         left: 0;
         width: 0%;
@@ -888,9 +1004,9 @@ html {
         width: 0%;
     }
 
-} */
+}
 
-/* @keyframes slide_up {
+@keyframes slide_up {
     0% {
         top: 0;
         height: 0%;
@@ -906,7 +1022,7 @@ html {
         height: 0%;
     }
 
-} */
+}
 
 
 
@@ -970,11 +1086,11 @@ html {
 
 
 
-/* .outer{
+.outer{
     width: 100%;
     height: 300px;
     position: sticky;
-} */
+}
 
 .img-container {
     margin-top: 50rem;

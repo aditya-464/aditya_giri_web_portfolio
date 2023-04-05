@@ -3,32 +3,26 @@ import React, { useState } from 'react'
 import { useRef } from 'react';
 
 export const Skills = () => {
-
     const [showItem, setShowItem] = useState(false);
-
     const skillRef1 = useRef(null);
     const skillRef2 = useRef(null);
-
-    const skillFunc = (value)=>{
+    const skillFunc = (value) => {
         setShowItem(value);
     }
-
-    window.addEventListener("scroll", ()=>{
+    window.addEventListener("scroll", () => {
+        if (!skillRef1.current || !skillRef2.current) {
+            return;
+        }
         const val1 = skillRef1.current.getBoundingClientRect().top;
         const val2 = skillRef2.current.getBoundingClientRect().top;
-
-        if (val1 <=250 && val2 <= 600) {
+        if (val1 <= 300 && val2 <= 600) {
             skillFunc(true);
-          }
-      
-          if (val2 <= 100 || val1 >= 650) {
-            skillFunc(false);
-          }
+        }
     })
 
     return (
         <>
-            <Box className='skills-container'>
+            <Box className='skills-container' id='skills'>
                 <Box className='skills-content-wrapper'>
                     <Box ref={skillRef1} className='markSkillUp'></Box>
                     {showItem && <Box className='skills-content'>
@@ -55,6 +49,5 @@ export const Skills = () => {
         </>
     )
 }
-
-
-export const MemoizedSkills = React.memo(Skills);
+var MemoizedSkills;
+export default MemoizedSkills = React.memo(Skills);
