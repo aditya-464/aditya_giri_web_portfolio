@@ -26,7 +26,7 @@ function App() {
       {/* <Suspense>
         <MemoizedAbout></MemoizedAbout>
       </Suspense> */}
-      
+
       {/* <Suspense>
         <MemoizedProject></MemoizedProject>
       </Suspense> */}
@@ -34,8 +34,13 @@ function App() {
       {/* <MemoizedProjectDetails number="01" title="Papyrus" techstack="React Js . Next Js. Node Js. Mongo DB" description="Web application to post blogs and news articles, along with relevant images" img1={img1} img2={img2}></MemoizedProjectDetails> */}
       {/* <MemoizedProjectDetailsRight number="01" title="Papyrus" techstack="React Js . Express Js . Node Js . Mongo DB" description="Web application to post blogs and news articles, along with relevant images" img1={img1} img2={img2}></MemoizedProjectDetailsRight> */}
 
-      <Suspense>
+      {/* <Suspense>
         <MemoizedSkills></MemoizedSkills>
+      </Suspense> */}
+
+      <Suspense>
+        <MemoizedContact></MemoizedContact>
+        {/* <MemoizedFooter></MemoizedFooter> */}
       </Suspense>
 
 

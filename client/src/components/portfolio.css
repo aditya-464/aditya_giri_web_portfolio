@@ -1078,7 +1078,8 @@ html {
 
     /* Skills */
 
-    .skills-content1, .skills-content2{
+    .skills-content1,
+    .skills-content2 {
         padding: 0 1.5rem;
     }
 
@@ -1088,7 +1089,44 @@ html {
 
     /* Contact */
 
-    
+    .contact-content {
+        width: 100%;
+        min-height: 100vh;
+        flex-direction: column;
+    }
+
+    .contact-content1 {
+        width: 100%;
+        min-height: 30vh;
+    }
+
+    .contact-content1-ques {
+        font-size: var(--h2);
+        font-weight: 600;
+    }
+
+    .contact-content1-con {
+        font-size: var(--h2);
+        font-weight: 400;
+    }
+
+    .contact-icon-box .contact-icon {
+        font-size: var(--h2);
+    }
+
+    .contact-content2 {
+        width: 100%;
+        min-height: 70vh;
+        align-items: flex-start;
+    }
+
+    .contact-form {
+        width: 70%;
+        padding: 0 3rem;
+        animation: contactTextSlide 2.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+        animation-delay: 0;
+    }
+
 
 
 }
