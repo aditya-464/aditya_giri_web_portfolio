@@ -905,6 +905,242 @@ html {
 
 
 
+@media only screen and (min-width:2201px) {
+
+    :root {
+
+        /* --h0: 108px;
+        --h1: 55px;
+        --h2: 44px;
+        --h3: 35px;
+        --h4: 28px;
+        --h5: 22px;
+        --h6: 18px; */
+
+        /* --h0: 108px;
+        --h1: 60px;
+        --h2: 48px;
+        --h3: 40px;
+        --h4: 32px;
+        --h5: 26px;
+        --h6: 22px; */
+
+        --h0: 108px;
+        --h1: 65px;
+        --h2: 52px;
+        --h3: 44px;
+        --h4: 36px;
+        --h5: 30px;
+        --h6: 26px;
+    }
+
+    /* Hero */
+
+    .hero-content{
+        padding: 0 3rem;
+    }
+
+    .hero-icon img{
+        width: 33rem;
+        height: 33rem;
+    }
+
+
+    /* Project Details */
+
+    .project-details-container {
+        padding: 0 2rem 1rem 14rem;
+    }
+
+    .project-number {
+        margin-top: 5rem;
+    }
+
+    .project-images-container #img1 {
+        width: 45rem;
+    }
+
+    .text-align-right {
+        padding-left: 2rem;
+        padding-right: 14rem;
+    }
+
+    .project-images-container-right #img1 {
+        width: 45rem;
+    }
+
+    /* Skills */
+    .skills-content1,
+    .skills-content2 {
+        padding: 0 5rem;
+    }
+
+    /* Contact */
+
+    .contact-icon {
+        margin: 0 3rem;
+    }
+
+    .contact-form {
+        width: 45%;
+    }
+
+    .contact-form .contact-form-label{
+        margin-bottom: 2.5rem;
+    }
+
+    .contact-form input {
+        margin-bottom: 1rem;
+    }
+
+    .contact-form textarea {
+        margin-bottom: 3rem;
+    }
+
+    .contact-form .contact-form-btn{
+        padding: 2.5rem 0;
+    }
+
+}
+
+
+
+
+
+@media only screen and (max-width : 2200px) {
+    :root {
+
+        /* --h0: 108px;
+        --h1: 55px;
+        --h2: 44px;
+        --h3: 35px;
+        --h4: 28px;
+        --h5: 22px;
+        --h6: 18px; */
+
+        --h0: 108px;
+        --h1: 60px;
+        --h2: 48px;
+        --h3: 40px;
+        --h4: 32px;
+        --h5: 26px;
+        --h6: 22px;
+    }
+
+    /* Project Details */
+
+    .project-details-container {
+        padding: 0 1rem 1rem 8.4rem;
+    }
+
+    .project-number {
+        margin-top: 5rem;
+    }
+
+    .project-images-container #img1 {
+        width: 42rem;
+    }
+
+    .text-align-right {
+        padding-right: 8.4rem;
+    }
+
+    .project-images-container-right #img1 {
+        width: 42rem;
+    }
+
+    /* Contact */
+
+    .contact-icon {
+        margin: 0 2rem;
+    }
+
+    .contact-form {
+        width: 50%;
+    }
+
+    .contact-form input {
+        margin-bottom: 1.5rem;
+    }
+
+    .contact-form textarea {
+        margin-bottom: 2rem;
+    }
+}
+
+
+
+
+
+
+@media only screen and (max-width : 1800px) {
+    :root {
+
+        --h0: 108px;
+        --h1: 55px;
+        --h2: 44px;
+        --h3: 35px;
+        --h4: 28px;
+        --h5: 22px;
+        --h6: 18px;
+    }
+
+    /* Project Details */
+
+    .project-details-container {
+        padding: 0 1rem 1rem 6rem;
+    }
+
+    .project-images-container #img1 {
+        width: 37rem;
+    }
+
+    .text-align-right {
+        padding-right: 6rem;
+    }
+
+    .project-images-container-right #img1 {
+        width: 37rem;
+    }
+
+    /* Contact */
+
+    .contact-icon {
+        margin: 0 2rem;
+    }
+
+    .contact-form {
+        width: 50%;
+    }
+}
+
+
+
+
+@media only screen and (max-width : 1400px) {
+    :root {
+
+        --h0: 50px;
+        --h1: 40px;
+        --h2: 32px;
+        --h3: 26px;
+        --h4: 22px;
+        --h5: 20px;
+        --h6: 18px;
+    }
+
+    .project-images-container #img1 {
+        width: 30rem;
+    }
+
+    .project-images-container-right #img1 {
+        width: 30rem;
+    }
+}
+
+
+
+
 
 
 @media only screen and (max-width: 1200px) {
@@ -943,15 +1179,15 @@ html {
         --h6: 18px;
     }
 
-    body{
+    body {
         background-color: var(--light-orange);
     }
 
-    .hero-content{
+    .hero-content {
         margin-bottom: 2rem;
     }
 
-    .hero-text-name{
+    .hero-text-name {
         margin-bottom: 1rem;
     }
 
@@ -963,14 +1199,14 @@ html {
 
     /* Section Name */
 
-    .section-name-container{
+    .section-name-container {
         min-height: 100vh;
     }
 
 
     /* Contact */
-   
-    .contact-form textarea{
+
+    .contact-form textarea {
         height: 12rem;
     }
 }
@@ -1580,7 +1816,7 @@ html {
 
     /* Section Name */
 
-    .section-name-container{
+    .section-name-container {
         min-height: 80vh;
     }
 
