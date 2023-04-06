@@ -9,7 +9,10 @@ import { details } from "./ContentArray"
 export const Project = () => {
   const [showItems, setShowItems] = useState(false);
   const [component, setComponent] = useState(0);
-  const [device, setDevice] = useState("");
+  const [deviceView, setDeviceView] = useState({
+    width: "",
+    height: ""
+  });
 
   const cmp1Ref = useRef(null);
   const cmp2Ref = useRef(null);
@@ -24,26 +27,10 @@ export const Project = () => {
     setShowItems(value);
   }
 
-  let check1 = 150;
-  let check2 = 300;
-
   useEffect(() => {
-    const width = window.innerWidth;
-    // if (width <= 480) {
-    //   check1 = 150;
-    //   check2 = 300;
-    //   setDevice("mobile");
-    // }
-    // else if (width > 480 && width <= 768) {
-    //   check1 = 180;
-    //   check2 = 500;
-    //   setDevice("smallScreen");
-    // }
-    // else {
-    //   check1 = 150;
-    //   check2 = 300;
-    //   setDevice("desktop");
-    // }
+    let w = window.innerWidth;
+    let h = window.innerHeight;
+    setDeviceView({ width: w, height: h });    
   }, [])
 
   function refValue(value) {
@@ -73,17 +60,12 @@ export const Project = () => {
     const val5 = cmp5Ref.current.getBoundingClientRect().top;
     const val6 = cmp6Ref.current.getBoundingClientRect().top;
 
-
-    if (val1 >= 600) {
-      cmpFunc(false);
-      cmpVal(-1);
-    }
-    if ((val1 <= check1 && val2 >= check2) || (val3 <= check1 && val4 >= check2) || (val5 <= check1 && val6 >= check2)) {
+    if ((val1 <= 0.25 * deviceView.height && val2 >= 0.3 * deviceView.height) || (val3 <= 0.25 * deviceView.height && val4 >= 0.3 * deviceView.height) || (val5 <= 0.25 * deviceView.height && val6 >= 0.3 * deviceView.height)) {
       cmpFunc(true);
-      if (val1 <= check1 && val2 >= check2) {
+      if (val1 <= 0.25 * deviceView.height && val2 >= 0.3 * deviceView.height) {
         cmpVal(0);
       }
-      else if (val3 <= check1 && val4 >= check2) {
+      else if (val3 <= 0.25 * deviceView.height && val4 >= 0.3 * deviceView.height) {
         cmpVal(1);
       }
       else {

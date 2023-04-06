@@ -23,7 +23,13 @@ function App() {
     <>
       {/* <MemoizedSectionName name="About Me"></MemoizedSectionName> */}
 
+      {/* <Box width="100%" height="100vh" backgroundColor="#FFE5B4"></Box>
 
+      <Suspense>
+        <MemoizedProject></MemoizedProject>
+      </Suspense>
+
+      <Box width="100%" height="100vh" backgroundColor="#FFE5B4"></Box> */}
 
 
 
