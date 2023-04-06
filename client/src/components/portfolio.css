@@ -273,6 +273,7 @@ html {
 }
 
 .about-content {
+    margin-top: 3rem;
     animation: aboutSlide 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
     animation-delay: 0;
 }
@@ -328,7 +329,7 @@ html {
 .project-details-outer-container {
     display: flex;
     width: 100%;
-    min-height: 100vh;
+    min-height: 80vh;
 }
 
 .project-details-container {
@@ -443,10 +444,14 @@ html {
 .project-images-container {
     position: relative;
     width: 50vw;
-    min-height: 100vh;
+    min-height: 80vh;
     background-color: var(--light-orange);
     color: var(--dark-blue);
     overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid red;
 }
 
 @keyframes imageSlide1 {
@@ -476,15 +481,16 @@ html {
 }
 
 .project-images-container #img1 {
-    top: 25%;
-    left: 10%;
+    /* top: 25%;
+    left: 10%; */
     animation: imageSlide1 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
     animation-delay: 0;
 }
 
 .project-images-container #img2 {
-    top: 25%;
-    left: 50%;
+    /* top: 25%;
+    left: 50%; */
+    display: none;
     animation: imageSlide2 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
     animation-delay: 0;
 
@@ -499,7 +505,7 @@ html {
 .project-details-outer-container-right {
     display: flex;
     width: 100%;
-    min-height: 100vh;
+    min-height: 80vh;
     /* border: 2px solid green; */
 }
 
@@ -575,10 +581,13 @@ html {
 .project-images-container-right {
     position: relative;
     width: 50vw;
-    min-height: 100vh;
+    min-height: 80vh;
     background-color: var(--light-orange);
     color: var(--dark-blue);
     overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .project-images-container-right img {
@@ -587,15 +596,16 @@ html {
 }
 
 .project-images-container-right #img1 {
-    top: 25%;
-    left: 10%;
+    /* top: 25%;
+    left: 10%; */
     animation: imageSlideRight1 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
     animation-delay: 0;
 }
 
 .project-images-container-right #img2 {
-    top: 25%;
-    left: 50%;
+    /* top: 25%;
+    left: 50%; */
+    display: none;
     animation: imageSlideRight2 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
     animation-delay: 0;
 }
@@ -912,16 +922,19 @@ html {
         --h6: 12px; */
 
 
-        --h0: 50px;
-        --h1: 45px;
-        --h2: 32px;
-        --h3: 25px;
-        --h4: 20px;
-        --h5: 18px;
-        --h6: 16px;
+        --h0: 52px;
+        --h1: 47px;
+        --h2: 35px;
+        --h3: 28px;
+        --h4: 22px;
+        --h5: 20px;
+        --h6: 18px;
     }
 
-    
+    body{
+        background-color: var(--light-orange);
+    }
+
     /* Hero */
 
     .hero-content {
@@ -1007,18 +1020,21 @@ html {
 
     .project-images-container {
         width: 100%;
-        min-height: 30vh;
+        min-height: 40vh;
         padding: 0 4.8rem;
         overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .project-images-container img {
-        width: 30rem;
+        width: 35rem;
     }
 
     .project-images-container #img1 {
-        top: 8rem;
-        left: 30%;
+        animation: imageSlide1 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+        animation-delay: 0;
     }
 
     .project-images-container #img2 {
@@ -1058,18 +1074,19 @@ html {
 
     .project-images-container-right {
         width: 100%;
-        min-height: 30vh;
+        min-height: 40vh;
         padding: 0 4.8rem;
         overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .project-images-container-right img {
-        width: 30rem;
+        width: 35rem;
     }
 
     .project-images-container-right #img1 {
-        top: 8rem;
-        left: 30%;
         animation: imageSlide1 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
         animation-delay: 0;
     }
@@ -1129,7 +1146,7 @@ html {
     }
 
     .contact-form {
-        width: 55%;
+        width: 50%;
         padding: 0 3rem;
         animation: contactTextSlide 2.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
         animation-delay: 0;
@@ -1182,6 +1199,10 @@ html {
         --h4: 16px;
         --h5: 14px;
         --h6: 12px;
+    }
+
+    body{
+        background-color: var(--light-orange);
     }
 
     /* Hero */
@@ -1276,8 +1297,8 @@ html {
     }
 
     .project-images-container #img1 {
-        top: 5rem;
-        left: 18%;
+        animation: imageSlide1 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+        animation-delay: 0;
     }
 
     .project-images-container #img2 {
@@ -1327,8 +1348,6 @@ html {
     }
 
     .project-images-container-right #img1 {
-        top: 5rem;
-        left: 18%;
         animation: imageSlide1 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
         animation-delay: 0;
     }

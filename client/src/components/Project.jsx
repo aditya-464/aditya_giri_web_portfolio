@@ -1,5 +1,5 @@
 import { Box, border } from '@chakra-ui/react'
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { MemoizedProjectDetails } from './ProjectDetails'
 import { MemoizedProjectDetailsRight } from './ProjectDetailsRight'
 import img1 from "../images/lp1.jfif"
@@ -9,6 +9,8 @@ import { details } from "./ContentArray"
 export const Project = () => {
   const [showItems, setShowItems] = useState(false);
   const [component, setComponent] = useState(0);
+  const [device, setDevice] = useState("");
+
   const cmp1Ref = useRef(null);
   const cmp2Ref = useRef(null);
   const cmp3Ref = useRef(null);
@@ -21,6 +23,29 @@ export const Project = () => {
   const cmpFunc = (value) => {
     setShowItems(value);
   }
+
+  let check1 = 150;
+  let check2 = 300;
+
+  useEffect(() => {
+    const width = window.innerWidth;
+    // if (width <= 480) {
+    //   check1 = 150;
+    //   check2 = 300;
+    //   setDevice("mobile");
+    // }
+    // else if (width > 480 && width <= 768) {
+    //   check1 = 180;
+    //   check2 = 500;
+    //   setDevice("smallScreen");
+    // }
+    // else {
+    //   check1 = 150;
+    //   check2 = 300;
+    //   setDevice("desktop");
+    // }
+  }, [])
+
   function refValue(value) {
     switch (value) {
       case 1:
@@ -38,7 +63,7 @@ export const Project = () => {
     }
   }
   window.addEventListener("scroll", () => {
-    if(!cmp1Ref.current || !cmp2Ref.current || !cmp3Ref.current || !cmp4Ref.current || !cmp5Ref.current || !cmp6Ref.current){
+    if (!cmp1Ref.current || !cmp2Ref.current || !cmp3Ref.current || !cmp4Ref.current || !cmp5Ref.current || !cmp6Ref.current) {
       return;
     }
     const val1 = cmp1Ref.current.getBoundingClientRect().top;
@@ -47,16 +72,18 @@ export const Project = () => {
     const val4 = cmp4Ref.current.getBoundingClientRect().top;
     const val5 = cmp5Ref.current.getBoundingClientRect().top;
     const val6 = cmp6Ref.current.getBoundingClientRect().top;
+
+
     if (val1 >= 600) {
       cmpFunc(false);
       cmpVal(-1);
     }
-    if ((val1 <= 150 && val2 >= 300) || (val3 <= 150 && val4 >= 300) || (val5 <= 150 && val6 >= 300)) {
+    if ((val1 <= check1 && val2 >= check2) || (val3 <= check1 && val4 >= check2) || (val5 <= check1 && val6 >= check2)) {
       cmpFunc(true);
-      if (val1 <= 150 && val2 >= 300) {
+      if (val1 <= check1 && val2 >= check2) {
         cmpVal(0);
       }
-      else if (val3 <= 150 && val4 >= 300) {
+      else if (val3 <= check1 && val4 >= check2) {
         cmpVal(1);
       }
       else {
