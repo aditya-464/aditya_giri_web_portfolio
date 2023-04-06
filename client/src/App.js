@@ -7,7 +7,7 @@ import { MemoizedProjectDetails } from "./components/ProjectDetails";
 import img1 from "./images/lp1.jfif"
 import img2 from "./images/lp2.jfif"
 import { MemoizedProjectDetailsRight } from "./components/ProjectDetailsRight";
-import { Box } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 
 
 const MemoizedProject = lazy(() => import('./components/Project'));
@@ -31,7 +31,14 @@ function App() {
 
       <Box width="100%" height="100vh" backgroundColor="#FFE5B4"></Box> */}
 
+      {/* <MemoizedSectionName name="Contact"></MemoizedSectionName> */}
 
+      {/* <Text>Hare Krishna</Text> */}
+      
+      {/* <Suspense>
+        <MemoizedContact></MemoizedContact>
+        <MemoizedFooter></MemoizedFooter>
+      </Suspense> */}
 
 
 
