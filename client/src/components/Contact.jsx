@@ -4,6 +4,14 @@ import { FaLinkedin, FaGithub, FaDribbbleSquare, FaEnvelope } from "react-icons/
 
 export const Contact = () => {
     const [showItem, setShowItem] = useState(false);
+    const [details, setDetails] = useState({
+        name: "", email: "", message: ""
+    })
+    const handleInputs = (e) => {
+        let name = e.target.name;
+        let value = e.target.value;
+        setDetails({ ...details, [name]: value });
+    }
     const contactRef1 = useRef(null);
     const contactRef2 = useRef(null);
     const contactFunc = (value) => {
@@ -15,10 +23,40 @@ export const Contact = () => {
         }
         const val1 = contactRef1.current.getBoundingClientRect().top;
         const val2 = contactRef2.current.getBoundingClientRect().top;
-        if (val1 <= 100 && val2>=400) {
+        if (val1 <= 100 && val2 >= 400) {
             contactFunc(true);
         }
     })
+
+    const submitData = async (e)=>{
+        e.preventDefault();
+        const {name, email, message} = details;
+
+        const res = await fetch("http://localhost:3300/sendmessage", {
+            method : "POST",
+            headers : {
+                "Content-Type" : "application/json"
+            },
+            body : JSON.stringify({
+                name, email, message
+            })
+        });
+
+        const data = await res.json();
+        if(res.status === 201 && data){
+            window.alert(res.status, " Message Sent Successfully!");
+            setDetails({
+                name : "", email : "", message : ""
+            })   
+        }
+        else{
+            window.alert(res.status, " Message Sent Failed!");
+            console.log(data);
+        }
+
+    }
+
+
 
     return (
         <>
@@ -44,27 +82,27 @@ export const Contact = () => {
                                 </>}
                         </Box>
                         <Box className='contact-content2'>
-                            {showItem && <form className='contact-form'>
+                            {showItem && <form method='POST' className='contact-form'>
                                 <label className='contact-form-label'>
                                     <Text className='contact-form-text'>
                                         Name
                                     </Text>
-                                    <input type="text" name="name" required />
+                                    <input type="text" name="name" value={details.name} onChange={handleInputs} required />
                                 </label>
                                 <label className='contact-form-label'>
                                     <Text className='contact-form-text'>
                                         Email
                                     </Text>
-                                    <input type="email" name="email" required />
+                                    <input type="email" name="email" value={details.email} onChange={handleInputs} required />
                                 </label>
                                 <label className='contact-form-label'>
                                     <Text className='contact-form-text'>
                                         Message
                                     </Text>
-                                    <textarea type="text" name="message" rows="7" cols="10" required />
+                                    <textarea type="text" name="message" rows="7" cols="10" value={details.message} onChange={handleInputs} required />
                                 </label>
                                 <label className='contact-form-label'>
-                                    <input className='contact-form-btn' type="submit" value="Submit" />
+                                    <input className='contact-form-btn' type="submit" value="Submit" onClick={submitData}/>
                                 </label>
                             </form>}
                         </Box>
