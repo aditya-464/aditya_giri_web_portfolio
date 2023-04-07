@@ -1870,7 +1870,7 @@ html {
     }
 
     .project-images-container img {
-        width: 25rem;
+        width: 23rem !important;
     }
 
     .project-images-container #img1 {
@@ -1921,7 +1921,7 @@ html {
     }
 
     .project-images-container-right img {
-        width: 25rem;
+        width: 23rem !important;
     }
 
     .project-images-container-right #img1 {
