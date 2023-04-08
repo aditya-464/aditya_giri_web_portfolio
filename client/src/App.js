@@ -8,6 +8,7 @@ import img1 from "./images/lp1.jfif"
 import img2 from "./images/lp2.jfif"
 import { MemoizedProjectDetailsRight } from "./components/ProjectDetailsRight";
 import { Box, Text } from "@chakra-ui/react";
+import { ProjectDetailsFull } from "./components/ProjectDetailsFull";
 // import MemoizedProject from "./components/Project"
 
 
@@ -41,6 +42,7 @@ function App() {
         <MemoizedFooter></MemoizedFooter>
       </Suspense> */}
 
+      {/* <ProjectDetailsFull></ProjectDetailsFull> */}
 
 
       <Hero></Hero>
