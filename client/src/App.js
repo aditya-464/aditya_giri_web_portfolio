@@ -8,8 +8,9 @@ import img1 from "./images/lp1.jfif"
 import img2 from "./images/lp2.jfif"
 import { MemoizedProjectDetailsRight } from "./components/ProjectDetailsRight";
 import { Box, Text } from "@chakra-ui/react";
-import { ProjectDetailsFull } from "./components/ProjectDetailsFull";
+// import { ProjectDetailsFull } from "./components/ProjectDetailsFull";
 // import MemoizedProject from "./components/Project"
+
 
 
 const MemoizedProject = lazy(() => import('./components/Project'));
@@ -19,10 +20,13 @@ const MemoizedContact = lazy(() => import('./components/Contact'));
 const MemoizedFooter = lazy(() => import('./components/Footer'));
 const MemoizedAbout = lazy(() => import('./components/About'));
 
+const MemoizedProjectDetailsFull = lazy(() => import('./components/ProjectDetailsFull'));
+
 
 function App() {
   return (
     <>
+      <MemoizedProjectDetailsFull></MemoizedProjectDetailsFull>
       {/* <MemoizedSectionName name="About Me"></MemoizedSectionName> */}
 
       {/* <Box width="100%" height="100vh" backgroundColor="#FFE5B4"></Box>
@@ -45,7 +49,7 @@ function App() {
       {/* <ProjectDetailsFull></ProjectDetailsFull> */}
 
 
-      <Hero></Hero>
+      {/* <Hero></Hero>
       <MemoizedSectionName name="About Me"></MemoizedSectionName>
       <Suspense>
         <MemoizedAbout></MemoizedAbout>
@@ -62,12 +66,12 @@ function App() {
       <Suspense>
         <MemoizedContact></MemoizedContact>
         <MemoizedFooter></MemoizedFooter>
-      </Suspense>
+      </Suspense> */}
 
 
 
 
-      {/* <Box width="100%" height="100vh" backgroundColor="#FFE5B4"></Box> */}
+      <Box width="100%" height="100vh" backgroundColor="#FFE5B4"></Box>
 
       {/* <Suspense>
         <MemoizedProject></MemoizedProject>

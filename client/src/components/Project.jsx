@@ -2,8 +2,8 @@ import { Box, border } from '@chakra-ui/react'
 import React, { useState, useRef, useEffect } from 'react'
 import { MemoizedProjectDetails } from './ProjectDetails'
 import { MemoizedProjectDetailsRight } from './ProjectDetailsRight'
-import img1 from "../images/pap_lap.svg"
-import img2 from "../images/pap_mob1.svg"
+import img1 from "../images/pap_lap.png"
+import img2 from "../images/pap_mob1.png"
 import { details } from "./ContentArray"
 
 export const Project = () => {

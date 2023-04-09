@@ -438,7 +438,6 @@ html {
     height: 100%;
     background-color: var(--text-animate);
     animation: slide_new 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-    /* animation: slide_new 1s ease-in-out forwards; */
     animation-delay: 0;
 }
 
@@ -611,6 +610,155 @@ html {
     animation-delay: 0;
 }
 
+
+
+
+
+
+
+/* Project Details Full */
+
+.project-details-full-container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--light-orange);
+    color: var(--dark-blue);
+}
+
+.project-details-full-container .project-details-full-back {
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-size: var(--h4);
+    margin: 1rem;
+    padding: 2rem 1.5rem;
+    border: 3px solid var(--dark-blue);
+    border-radius: 1rem;
+    background-color: var(--dark-blue);
+    color: var(--light-orange);
+    transition-duration: 300ms;
+}
+
+.project-details-full-container .project-details-full-back:hover {
+    background-color: var(--light-orange);
+    color: var(--dark-blue);
+    border: 3px solid var(--dark-blue);
+}
+
+
+.project-details-full-hero {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--light-orange);
+    color: var(--dark-blue);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: normal;
+}
+
+@keyframes projDetailsFullSLider {
+    0% {
+        transform: translateY(200%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+.project-details-full-hero .project-details-full-title {
+    overflow-y: hidden;
+    font-size: var(--h0);
+    letter-spacing: 0.2rem;
+    margin-bottom: 3rem;
+}
+
+.project-details-full-hero .project-details-full-subtitle {
+    overflow-y: hidden;
+    width: 70%;
+    font-size: var(--h3);
+    letter-spacing: 0.2rem;
+    margin-bottom: 7rem;
+    line-height: 125%;
+}
+
+.project-details-full-title span {
+    display: inline-block;
+    animation: projDetailsFullSLider 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    animation-delay: 200ms;
+}
+
+.project-details-full-subtitle span {
+    display: inline-block;
+    animation: projDetailsFullSLider 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    animation-delay: 200ms;
+}
+
+.projFullMark1,
+.projFullMark2 {
+    width: 100%;
+    height: 1px;
+    background-color: var(--light-orange);
+}
+
+.proj-details-full-image-container {
+    width: 90%;
+    min-height: 80vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+.proj-details-full-image-content {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.proj-details-full-image-content img {
+    width: 50rem;
+}
+
+.imgFull1 {
+    animation: projDetailsFullSLider 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    animation-delay: 0;
+}
+
+.imgFull2 {
+    animation: projDetailsFullSLider 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    animation-delay: 0;
+}
+
+.imgFull3 {
+    animation: projDetailsFullSLider 2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    animation-delay: 0;
+}
+
+.project-details-full-description-container {
+    width: 70%;
+    min-height: 100vh;
+    margin: auto;
+    text-align: center;
+    font-size: var(--h4);
+    margin-top: 7rem;
+}
+
+.project-details-full-description {
+    overflow-y: hidden;
+}
+
+.project-details-full-description span {
+    display: inline-block;
+    animation: projDetailsFullSLider 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    animation-delay: 0;
+}
 
 
 
@@ -937,11 +1085,11 @@ html {
 
     /* Hero */
 
-    .hero-content{
+    .hero-content {
         padding: 0 3rem;
     }
 
-    .hero-icon img{
+    .hero-icon img {
         width: 33rem;
         height: 33rem;
     }
@@ -986,7 +1134,7 @@ html {
         width: 45%;
     }
 
-    .contact-form .contact-form-label{
+    .contact-form .contact-form-label {
         margin-bottom: 2.5rem;
     }
 
@@ -998,7 +1146,7 @@ html {
         margin-bottom: 3rem;
     }
 
-    .contact-form .contact-form-btn{
+    .contact-form .contact-form-btn {
         padding: 2.5rem 0;
     }
 
@@ -2012,16 +2160,6 @@ html {
 
 
 
-
-
-/* Project Details Full */
-
-.project-details-full-container{
-    width: 100%;
-    min-height: 100vh;
-    background-color: var(--light-orange);
-    color: var(--dark-blue);
-}
 
 
 
