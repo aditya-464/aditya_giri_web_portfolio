@@ -1,5 +1,6 @@
-import { Box, Button, Flex, Text } from '@chakra-ui/react'
 import React, { useState, useEffect } from 'react'
+import { NavLink } from "react-router-dom"
+import { Box, Button, Flex, Text } from '@chakra-ui/react'
 import PropTypes from 'prop-types';
 
 export const ProjectDetails = (props) => {
@@ -20,7 +21,9 @@ export const ProjectDetails = (props) => {
                         <Box className='project-wrapper-box'>
                             <span className='project-description animate-text'>{description}</span>
                         </Box>
-                        <button className='project-details-btn animate-text'>View More</button>
+                        <button className='project-details-btn animate-text'>
+                            <NavLink to="/projDetail">View More</NavLink>
+                        </button>
                     </Box>
                 </Box>
                 <Box className="project-images-container">

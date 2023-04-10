@@ -9,19 +9,14 @@ import img1 from "./images/lp1.jfif"
 import img2 from "./images/lp2.jfif"
 import { MemoizedProjectDetailsRight } from "./components/ProjectDetailsRight";
 import { Box, Text } from "@chakra-ui/react";
+import MemoizedProjectDetailsFull from "./components/ProjectDetailsFull";
+
+
+
+
 // import { HomePage } from "./components/HomePage";
 const MemoizedHomePage = lazy(() => import('./components/HomePage'));
-// import { ProjectDetailsFull } from "./components/ProjectDetailsFull";
 // import MemoizedProject from "./components/Project"
-
-
-
-// const MemoizedProject = lazy(() => import('./components/Project'));
-// const MemoizedSectionName = lazy(() => import('./components/SectionName'));
-// const MemoizedSkills = lazy(() => import('./components/Skills'));
-// const MemoizedContact = lazy(() => import('./components/Contact'));
-// const MemoizedFooter = lazy(() => import('./components/Footer'));
-// const MemoizedAbout = lazy(() => import('./components/About'));
 
 // const MemoizedProjectDetailsFull = lazy(() => import('./components/ProjectDetailsFull'));
 
@@ -31,8 +26,10 @@ function App() {
     <>
 
       <Routes>
-        <Route path='/' element={<MemoizedHomePage></MemoizedHomePage>}></Route>
+        <Route exact path='/' element={<MemoizedHomePage></MemoizedHomePage>}></Route>
+        <Route exact path="/projDetail" element={<MemoizedProjectDetailsFull></MemoizedProjectDetailsFull>}></Route>
       </Routes>
+
 
 
       {/* <MemoizedProjectDetailsFull></MemoizedProjectDetailsFull> */}

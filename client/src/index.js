@@ -5,13 +5,19 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ChakraProvider } from '@chakra-ui/react'
 import { BrowserRouter } from "react-router-dom"
+import ScrollToTop from './components/ScrollToTop';
+import { store } from './redux/store'
+import { Provider } from 'react-redux'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <React.StrictMode>
       <ChakraProvider>
-        <App />
+        <ScrollToTop></ScrollToTop>
+        <Provider store={store}>
+          <App />
+        </Provider>
       </ChakraProvider>
     </React.StrictMode>
   </BrowserRouter>
