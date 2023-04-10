@@ -2,12 +2,44 @@ import React, { useEffect, useRef, useState } from 'react'
 import { useSelector } from "react-redux"
 import { Box, Button, Text } from '@chakra-ui/react'
 import { FaArrowLeft } from "react-icons/fa";
-import img2 from "../images/pap_lap.png"
 import img1 from "../images/pap_mob2.png"
+import img2 from "../images/pap_lap.png"
 import img3 from "../images/pap_tab.png"
+import img4 from "../images/txt_mob.png"
+import img5 from "../images/txt_lap.png"
+import img6 from "../images/txt_tab.png"
 import MemoizedSectionName from "./SectionName"
 import { details as contentArray } from "./ContentArray"
 
+const Comp1 = () => {
+    return (
+        <Box className='proj-details-full-image-content'>
+            <img src={img1} className='imgFull1' alt='img1'></img>
+            <img src={img2} className='imgFull2' alt='img2'></img>
+            <img src={img3} className='imgFull3' alt='img3'></img>
+        </Box>
+    )
+}
+
+const Comp2 = () => {
+    return (
+        <Box className='proj-details-full-image-content'>
+            <img src={img4} className='imgFull1' alt='img1'></img>
+            <img src={img5} className='imgFull2' alt='img2'></img>
+            <img src={img6} className='imgFull3' alt='img3'></img>
+        </Box>
+    )
+}
+
+// const Comp3 = () => {
+//     return (
+//         <Box className='proj-details-full-image-content'>
+//             <img src={img7} className='imgFull1' alt='img1'></img>
+//             <img src={img8} className='imgFull2' alt='img2'></img>
+//             <img src={img9} className='imgFull3' alt='img3'></img>
+//         </Box>
+//     )
+// }
 
 
 export const ProjectDetailsFull = () => {
@@ -55,6 +87,8 @@ export const ProjectDetailsFull = () => {
         }
     })
 
+    
+
     return (
         <>
             <Box className="project-details-full-container">
@@ -67,11 +101,7 @@ export const ProjectDetailsFull = () => {
                     <MemoizedSectionName name="Images"></MemoizedSectionName>
                     <Box className='proj-details-full-image-container'>
                         <Box ref={mark1Ref} className='projFullMark1'></Box>
-                        {showItem.image && <Box className='proj-details-full-image-content'>
-                            <img src={img1} className='imgFull1' alt='img1'></img>
-                            <img src={img2} className='imgFull2' alt='img2'></img>
-                            <img src={img3} className='imgFull3' alt='img3'></img>
-                        </Box>}
+                        {showItem.image && <Comp1/>}
                     </Box>
                     <MemoizedSectionName name="Description"></MemoizedSectionName>
                     <Box className='project-details-full-description-container'>
