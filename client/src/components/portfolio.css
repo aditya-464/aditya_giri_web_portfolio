@@ -637,6 +637,7 @@ html {
     background-color: var(--dark-blue);
     color: var(--light-orange);
     transition-duration: 300ms;
+    z-index: 1000;
 }
 
 .project-details-full-container .project-details-full-back:hover {
@@ -688,13 +689,13 @@ html {
 .project-details-full-title span {
     display: inline-block;
     animation: projDetailsFullSLider 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-    animation-delay: 200ms;
+    animation-delay: 0;
 }
 
 .project-details-full-subtitle span {
     display: inline-block;
     animation: projDetailsFullSLider 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-    animation-delay: 200ms;
+    animation-delay: 0;
 }
 
 .projFullMark1,
@@ -2080,6 +2081,63 @@ html {
 
     .project-images-container-right #img2 {
         display: none;
+    }
+
+
+
+
+
+    /* Project Details Full */
+
+    .project-details-full-container .project-details-full-back {
+        padding: 1.5rem 1rem;
+    }
+
+    .project-details-full-subtitle {
+        margin-bottom: 10rem;
+    }
+
+    .proj-details-full-image-content {
+        flex-direction: column;
+    }
+
+    .proj-details-full-image-content img {
+        margin-top: 2rem;
+    }
+
+    @keyframes projDetailsFullSLiderMobL {
+        0% {
+            opacity: 0;
+            transform: translateX(-150%);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes projDetailsFullSLiderMobR {
+        0% {
+            opacity: 0;
+            transform: translateX(150%);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+
+    .proj-details-full-image-content .imgFull1, .proj-details-full-image-content .imgFull3 {
+        animation: projDetailsFullSLiderMobL 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+        animation-delay: 0;
+    }
+
+    .proj-details-full-image-content .imgFull2 {
+        animation: projDetailsFullSLiderMobR 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+        animation-delay: 0;
     }
 
 
