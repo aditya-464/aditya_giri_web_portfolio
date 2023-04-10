@@ -728,17 +728,17 @@ html {
 }
 
 .imgFull1 {
-    animation: projDetailsFullSLider 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-    animation-delay: 0;
-}
-
-.imgFull2 {
     animation: projDetailsFullSLider 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
     animation-delay: 0;
 }
 
-.imgFull3 {
+.imgFull2 {
     animation: projDetailsFullSLider 2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    animation-delay: 0;
+}
+
+.imgFull3 {
+    animation: projDetailsFullSLider 2.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
     animation-delay: 0;
 }
 
@@ -1119,6 +1119,24 @@ html {
         width: 45rem;
     }
 
+
+    /* Project Details Full */
+
+    .proj-details-full-image-container{
+        width: 100%;
+    }
+
+    .proj-details-full-image-content img{
+        width: 70rem;
+    }
+
+    .project-details-full-description-container{
+        width: 60%;
+    }
+
+
+
+
     /* Skills */
     .skills-content1,
     .skills-content2 {
@@ -1199,6 +1217,24 @@ html {
         width: 42rem;
     }
 
+
+    /* Project Details Full */
+
+    .proj-details-full-image-container{
+        width: 100%;
+    }
+
+    .proj-details-full-image-content img{
+        width: 60rem;
+    }
+
+    .project-details-full-description-container{
+        width: 60%;
+    }
+
+
+
+
     /* Contact */
 
     .contact-icon {
@@ -1253,6 +1289,16 @@ html {
         width: 50rem;
     }
 
+
+
+    /* Project Details Full */
+
+    .proj-details-full-image-container{
+        width: 100%;
+    }
+
+
+
     /* Contact */
 
     .contact-icon {
@@ -1286,6 +1332,24 @@ html {
     .project-images-container-right #img1 {
         width: 30rem;
     }
+
+
+
+    /* Project Details Full */
+
+    .proj-details-full-image-container{
+        width: 100%;
+    }
+
+    .proj-details-full-image-content img{
+        width: 40rem;
+    }
+
+    .project-details-full-description-container{
+        width: 65%;
+    }
+
+
 }
 
 
@@ -1344,6 +1408,18 @@ html {
     .hero-icon img {
         width: 18rem;
         height: 18rem;
+    }
+
+
+
+    /* Project Details Full */
+
+    .proj-details-full-image-container{
+        width: 100%;
+    }
+
+    .proj-details-full-image-content img{
+        width: 32rem;
     }
 
 
