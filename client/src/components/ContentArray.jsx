@@ -9,7 +9,7 @@ export const details = [
 
     {
         projectNumber: "02",
-        projectTitle: "TextUtils",
+        projectTitle: "Text Analyzer",
         projectTechstack: "React Js . CSS",
         projectShortDesc: "Web application to analyse text & has different view modes to appeal users",
         projectLongDesc: "The text editing website created with React JS and CSS is a powerful and efficient platform for editing and formatting written content. The website is designed with a user-friendly interface and offers a wide range of tools and features for creating, editing, and publishing text-based content. React JS is a popular open-source JavaScript library that enables developers to create highly interactive and responsive user interfaces. The website created with React JS offers a smooth and seamless experience for users and provides real-time updates as changes are made to the text. CSS, on the other hand, is a style sheet language used for describing the presentation of a document written in HTML. The website created with CSS offers a visually appealing design, making it easier for users to navigate and use the platform. Overall, the text editing website created with React JS and CSS offers an intuitive and powerful platform for creating and editing text-based content, making it a top choice for writers, editors, and content creators."

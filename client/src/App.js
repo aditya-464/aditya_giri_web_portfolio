@@ -3,30 +3,39 @@ import "./components/portfolio.css"
 import { Hero } from './components/Hero';
 import MemoizedSectionName from './components/SectionName';
 import { lazy, Suspense } from 'react';
+import { Routes, Route } from "react-router-dom"
 import { MemoizedProjectDetails } from "./components/ProjectDetails";
 import img1 from "./images/lp1.jfif"
 import img2 from "./images/lp2.jfif"
 import { MemoizedProjectDetailsRight } from "./components/ProjectDetailsRight";
 import { Box, Text } from "@chakra-ui/react";
+// import { HomePage } from "./components/HomePage";
+const MemoizedHomePage = lazy(() => import('./components/HomePage'));
 // import { ProjectDetailsFull } from "./components/ProjectDetailsFull";
 // import MemoizedProject from "./components/Project"
 
 
 
-const MemoizedProject = lazy(() => import('./components/Project'));
+// const MemoizedProject = lazy(() => import('./components/Project'));
 // const MemoizedSectionName = lazy(() => import('./components/SectionName'));
-const MemoizedSkills = lazy(() => import('./components/Skills'));
-const MemoizedContact = lazy(() => import('./components/Contact'));
-const MemoizedFooter = lazy(() => import('./components/Footer'));
-const MemoizedAbout = lazy(() => import('./components/About'));
+// const MemoizedSkills = lazy(() => import('./components/Skills'));
+// const MemoizedContact = lazy(() => import('./components/Contact'));
+// const MemoizedFooter = lazy(() => import('./components/Footer'));
+// const MemoizedAbout = lazy(() => import('./components/About'));
 
-const MemoizedProjectDetailsFull = lazy(() => import('./components/ProjectDetailsFull'));
+// const MemoizedProjectDetailsFull = lazy(() => import('./components/ProjectDetailsFull'));
 
 
 function App() {
   return (
     <>
-      <MemoizedProjectDetailsFull></MemoizedProjectDetailsFull>
+
+      <Routes>
+        <Route path='/' element={<MemoizedHomePage></MemoizedHomePage>}></Route>
+      </Routes>
+
+
+      {/* <MemoizedProjectDetailsFull></MemoizedProjectDetailsFull> */}
       {/* <MemoizedSectionName name="About Me"></MemoizedSectionName> */}
 
       {/* <Box width="100%" height="100vh" backgroundColor="#FFE5B4"></Box>
@@ -71,7 +80,7 @@ function App() {
 
 
 
-      <Box width="100%" height="100vh" backgroundColor="#FFE5B4"></Box>
+      {/* <Box width="100%" height="100vh" backgroundColor="#FFE5B4"></Box> */}
 
       {/* <Suspense>
         <MemoizedProject></MemoizedProject>

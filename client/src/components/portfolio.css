@@ -38,6 +38,14 @@ html {
 }
 
 
+/* Home Page */
+
+.home-page{
+    background-color: var(--light-orange);
+    width: auto;
+    height: auto;
+}
+
 /* Navbar */
 
 .navbar-container {
@@ -483,7 +491,7 @@ html {
 .project-images-container #img1 {
     /* top: 25%;
     left: 10%; */
-    animation: imageSlide1 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    animation: imageSlide1 2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
     animation-delay: 0;
 }
 
@@ -491,7 +499,7 @@ html {
     /* top: 25%;
     left: 50%; */
     display: none;
-    animation: imageSlide2 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    animation: imageSlide2 2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
     animation-delay: 0;
 
 }
@@ -598,7 +606,7 @@ html {
 .project-images-container-right #img1 {
     /* top: 25%;
     left: 10%; */
-    animation: imageSlideRight1 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    animation: imageSlideRight1 2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
     animation-delay: 0;
 }
 
@@ -606,7 +614,7 @@ html {
     /* top: 25%;
     left: 50%; */
     display: none;
-    animation: imageSlideRight2 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    animation: imageSlideRight2 2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
     animation-delay: 0;
 }
 
