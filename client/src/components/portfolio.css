@@ -1566,6 +1566,71 @@ html {
     }
 
 
+
+    /* Project Details Full */
+
+    .proj-details-full-image-container{
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .proj-details-full-image-content {
+        flex-direction: column;
+    }
+
+    .proj-details-full-image-content img {
+        margin-top: 2rem;
+    }
+
+    @keyframes projDetailsFullSLiderMobL {
+        0% {
+            opacity: 0;
+            transform: translateX(-200%);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes projDetailsFullSLiderMobR {
+        0% {
+            opacity: 0;
+            transform: translateX(200%);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .proj-details-full-image-content .imgFull1 {
+        animation: projDetailsFullSLiderMobL 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+        animation-delay: 0;
+    }
+
+    .proj-details-full-image-content .imgFull2 {
+        animation: projDetailsFullSLiderMobR 2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+        animation-delay: 0;
+    }
+
+    .proj-details-full-image-content .imgFull3 {
+        animation: projDetailsFullSLiderMobL 2.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+        animation-delay: 0;
+    }
+
+
+    .project-details-full-description-container {
+        width: 65%;
+    }
+
+
+
+
+
+
     /* Skills */
 
     .skills-content1,
@@ -1826,6 +1891,67 @@ html {
     .project-images-container-right #img2 {
         display: none;
     }
+
+
+
+    /* Project Details Full */
+    .proj-details-full-image-container{
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .proj-details-full-image-content {
+        flex-direction: column;
+    }
+
+    .proj-details-full-image-content img {
+        margin-top: 2rem;
+    }
+
+    @keyframes projDetailsFullSLiderMobL {
+        0% {
+            opacity: 0;
+            transform: translateX(-200%);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes projDetailsFullSLiderMobR {
+        0% {
+            opacity: 0;
+            transform: translateX(200%);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .proj-details-full-image-content .imgFull1 {
+        animation: projDetailsFullSLiderMobL 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+        animation-delay: 0;
+    }
+
+    .proj-details-full-image-content .imgFull2 {
+        animation: projDetailsFullSLiderMobR 2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+        animation-delay: 0;
+    }
+
+    .proj-details-full-image-content .imgFull3 {
+        animation: projDetailsFullSLiderMobL 2.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+        animation-delay: 0;
+    }
+
+    .project-details-full-description-container {
+        width: 65%;
+    }
+
+
 
 
     /* Skills */
@@ -2097,6 +2223,11 @@ html {
         margin-bottom: 10rem;
     }
 
+    .proj-details-full-image-container{
+        width: 100%;
+        overflow-x: hidden;
+    }
+
     .proj-details-full-image-content {
         flex-direction: column;
     }
@@ -2108,7 +2239,7 @@ html {
     @keyframes projDetailsFullSLiderMobL {
         0% {
             opacity: 0;
-            transform: translateX(-150%);
+            transform: translateX(-200%);
         }
 
         100% {
@@ -2120,7 +2251,7 @@ html {
     @keyframes projDetailsFullSLiderMobR {
         0% {
             opacity: 0;
-            transform: translateX(150%);
+            transform: translateX(200%);
         }
 
         100% {
@@ -2130,13 +2261,18 @@ html {
     }
 
 
-    .proj-details-full-image-content .imgFull1, .proj-details-full-image-content .imgFull3 {
+    .proj-details-full-image-content .imgFull1 {
         animation: projDetailsFullSLiderMobL 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
         animation-delay: 0;
     }
 
     .proj-details-full-image-content .imgFull2 {
-        animation: projDetailsFullSLiderMobR 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+        animation: projDetailsFullSLiderMobR 2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+        animation-delay: 0;
+    }
+
+    .proj-details-full-image-content .imgFull3 {
+        animation: projDetailsFullSLiderMobL 2.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
         animation-delay: 0;
     }
 
