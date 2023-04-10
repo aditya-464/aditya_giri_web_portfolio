@@ -18,7 +18,7 @@ export const details = [
     {
         projectNumber: "03",
         projectTitle: "Letzzz Race",
-        projectTechstack: "React Js . CSS",
+        projectTechstack: "HTML . CSS . JavaScript",
         projectShortDesc: "Animated car race game with proper score tracker & variety of obstacles",
         projectLongDesc: "The car racing game made using HTML, CSS, and JavaScript is an exciting game that is played online. The game involves players racing against each other on a virtual track, using cars that they can customize to their liking. The game's interface is designed using HTML and CSS, which gives it a visually appealing appearance and makes it easy to navigate. The gameplay is powered by JavaScript, which provides interactivity and makes the game more engaging. The game features different levels with increasing difficulty, and players need to complete each level to unlock the next one. Players can also earn points for their performance, which they can use to purchase upgrades for their cars. The car racing game is designed to be accessible and fun for players of all skill levels. It can be played on a range of devices, including desktops, laptops, tablets, and smartphones. The game's use of HTML, CSS, and JavaScript makes it a great example of the power of web technologies for game development."
     }

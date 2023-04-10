@@ -1,10 +1,26 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { NavLink } from "react-router-dom"
-import { Box, Button, Flex, Text } from '@chakra-ui/react'
+import { useDispatch } from "react-redux"
+import { changeValue } from '../redux/projectIndex';
+import { Box } from '@chakra-ui/react'
 import PropTypes from 'prop-types';
 
 export const ProjectDetails = (props) => {
+    const dispatch = useDispatch();
+
     const { number, title, techstack, description, img1, img2 } = props;
+
+    const handleDispatch = ()=>{
+        if(number=="01"){
+            dispatch(changeValue(0));
+        }
+        else if(number=="02"){
+            dispatch(changeValue(1));
+        }
+        else{
+            dispatch(changeValue(2));
+        }
+    }
 
     return (
         <>
@@ -21,7 +37,7 @@ export const ProjectDetails = (props) => {
                         <Box className='project-wrapper-box'>
                             <span className='project-description animate-text'>{description}</span>
                         </Box>
-                        <button className='project-details-btn animate-text'>
+                        <button className='project-details-btn animate-text' onClick={handleDispatch}>
                             <NavLink to="/projDetail">View More</NavLink>
                         </button>
                     </Box>
