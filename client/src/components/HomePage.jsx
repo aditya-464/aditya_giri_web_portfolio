@@ -2,9 +2,9 @@ import React from 'react'
 import { lazy, Suspense } from 'react';
 import { Box } from "@chakra-ui/react";
 import { Hero } from './Hero';
-import MemoizedSectionName from './SectionName';
+// import MemoizedSectionName from './SectionName';
 const MemoizedProject = lazy(() => import('./Project'));
-// const MemoizedSectionName = lazy(() => import('./SectionName'));
+const MemoizedSectionName = lazy(() => import('./SectionName'));
 const MemoizedSkills = lazy(() => import('./Skills'));
 const MemoizedContact = lazy(() => import('./Contact'));
 const MemoizedFooter = lazy(() => import('./Footer'));
@@ -16,20 +16,17 @@ export const HomePage = () => {
         <>
             <Box className='home-page'>
                 <Hero></Hero>
-                <MemoizedSectionName name="About Me"></MemoizedSectionName>
                 <Suspense>
+                    <MemoizedSectionName name="About Me"></MemoizedSectionName>
                     <MemoizedAbout></MemoizedAbout>
-                </Suspense>
-                <MemoizedSectionName name="Projects"></MemoizedSectionName>
-                <Suspense>
+
+                    <MemoizedSectionName name="Projects"></MemoizedSectionName>
                     <MemoizedProject></MemoizedProject>
-                </Suspense>
-                <MemoizedSectionName name="Skills"></MemoizedSectionName>
-                <Suspense>
+
+                    <MemoizedSectionName name="Skills"></MemoizedSectionName>
                     <MemoizedSkills></MemoizedSkills>
-                </Suspense>
-                <MemoizedSectionName name="Contact"></MemoizedSectionName>
-                <Suspense>
+
+                    <MemoizedSectionName name="Contact"></MemoizedSectionName>
                     <MemoizedContact></MemoizedContact>
                     <MemoizedFooter></MemoizedFooter>
                 </Suspense>
