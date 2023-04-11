@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom"
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Box, Button, Text } from '@chakra-ui/react'
 import { FaArrowLeft } from "react-icons/fa";
 import img1 from "../images/pap_mob2.png"
@@ -18,9 +19,9 @@ import { details as contentArray } from "./ContentArray"
 const Comp0 = () => {
     return (
         <Box className='proj-details-full-image-content'>
-            <img src={img1} className='imgFull1' alt='img1'></img>
-            <img src={img2} className='imgFull2' alt='img2'></img>
-            <img src={img3} className='imgFull3' alt='img3'></img>
+            <LazyLoadImage src={img1} className='imgFull1' alt='img1'></LazyLoadImage>
+            <LazyLoadImage src={img2} className='imgFull2' alt='img2'></LazyLoadImage>
+            <LazyLoadImage src={img3} className='imgFull3' alt='img3'></LazyLoadImage>
         </Box>
     )
 }
@@ -28,9 +29,9 @@ const Comp0 = () => {
 const Comp1 = () => {
     return (
         <Box className='proj-details-full-image-content'>
-            <img src={img4} className='imgFull1' alt='img1'></img>
-            <img src={img5} className='imgFull2' alt='img2'></img>
-            <img src={img6} className='imgFull3' alt='img3'></img>
+            <LazyLoadImage src={img4} className='imgFull1' alt='img1'></LazyLoadImage>
+            <LazyLoadImage src={img5} className='imgFull2' alt='img2'></LazyLoadImage>
+            <LazyLoadImage src={img6} className='imgFull3' alt='img3'></LazyLoadImage>
         </Box>
     )
 }
@@ -38,9 +39,9 @@ const Comp1 = () => {
 const Comp2 = () => {
     return (
         <Box className='proj-details-full-image-content'>
-            <img src={img7} className='imgFull1' alt='img1'></img>
-            <img src={img8} className='imgFull2' alt='img2'></img>
-            <img src={img9} className='imgFull3' alt='img3'></img>
+            <LazyLoadImage src={img7} className='imgFull1' alt='img1'></LazyLoadImage>
+            <LazyLoadImage src={img8} className='imgFull2' alt='img2'></LazyLoadImage>
+            <LazyLoadImage src={img9} className='imgFull3' alt='img3'></LazyLoadImage>
         </Box>
     )
 }

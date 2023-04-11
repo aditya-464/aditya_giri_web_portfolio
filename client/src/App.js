@@ -5,8 +5,6 @@ import MemoizedSectionName from './components/SectionName';
 import { lazy, Suspense } from 'react';
 import { Routes, Route } from "react-router-dom"
 import { MemoizedProjectDetails } from "./components/ProjectDetails";
-import img1 from "./images/lp1.jfif"
-import img2 from "./images/lp2.jfif"
 import { MemoizedProjectDetailsRight } from "./components/ProjectDetailsRight";
 import { Box, Text } from "@chakra-ui/react";
 import MemoizedProjectDetailsFull from "./components/ProjectDetailsFull";

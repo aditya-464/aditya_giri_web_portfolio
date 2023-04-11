@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import heroIcon from "../images/AGhero.svg"
-import { Box, Flex, HStack, Text } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
 
 export const Hero = () => {
   const [showItem, setShowItem] = useState(false);

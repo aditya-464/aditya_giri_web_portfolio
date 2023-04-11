@@ -74,16 +74,16 @@ export const Contact = () => {
                                         <span> Let's connect</span>
                                     </Box>
                                     <Box className='contact-icon-box'>
-                                        <a href='https://www.linkedin.com/in/aditya-giri-948420226/' target='_blank'>
+                                        <a href='https://www.linkedin.com/in/aditya-giri-948420226/' target='_blank' rel="noreferrer noopener">
                                             <FaLinkedin className='contact-icon'></FaLinkedin>
                                         </a>
-                                        <a href='https://github.com/aditya-464' target='_blank'>
+                                        <a href='https://github.com/aditya-464' target='_blank' rel="noreferrer noopener">
                                             <FaGithub className='contact-icon'></FaGithub>
                                         </a>
-                                        <a href='https://dribbble.com/adityagiri01' target='_blank'>
+                                        <a href='https://dribbble.com/adityagiri01' target='_blank' rel="noreferrer noopener">
                                             <FaDribbbleSquare className='contact-icon'></FaDribbbleSquare>
                                         </a>
-                                        <a href='mailto:adityagiri1911@gmail.com' target='_blank'>
+                                        <a href='mailto:adityagiri1911@gmail.com' >
                                             <FaEnvelope className='contact-icon'></FaEnvelope>
                                         </a>
                                     </Box>

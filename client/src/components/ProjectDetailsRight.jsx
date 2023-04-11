@@ -2,6 +2,7 @@ import React from 'react'
 import { NavLink } from "react-router-dom"
 import { useDispatch } from "react-redux"
 import { changeValue } from '../redux/projectIndex';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Box} from '@chakra-ui/react'
 import PropTypes from 'prop-types';
 
@@ -27,7 +28,7 @@ export const ProjectDetailsRight = (props) => {
         <>
             <Box className='project-details-outer-container-right'>
                 <Box className="project-images-container-right">
-                    <img src={img} className="project-images-img" id='img1' alt='img1'></img>
+                    <LazyLoadImage src={img} className="project-images-img" id='img1' alt='img1'></LazyLoadImage>
                 </Box>
                 <Box className="project-details-container text-align-right">
                     <span className="project-number animate-text-right  animate-specific-mobile-text">{number}</span>
