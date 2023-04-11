@@ -2,7 +2,6 @@ import React from 'react'
 import { lazy, Suspense } from 'react';
 import { Box } from "@chakra-ui/react";
 import { Hero } from './Hero';
-// import MemoizedSectionName from './SectionName';
 const MemoizedProject = lazy(() => import('./Project'));
 const MemoizedSectionName = lazy(() => import('./SectionName'));
 const MemoizedSkills = lazy(() => import('./Skills'));
@@ -19,13 +18,10 @@ export const HomePage = () => {
                 <Suspense>
                     <MemoizedSectionName name="About Me"></MemoizedSectionName>
                     <MemoizedAbout></MemoizedAbout>
-
                     <MemoizedSectionName name="Projects"></MemoizedSectionName>
                     <MemoizedProject></MemoizedProject>
-
                     <MemoizedSectionName name="Skills"></MemoizedSectionName>
                     <MemoizedSkills></MemoizedSkills>
-
                     <MemoizedSectionName name="Contact"></MemoizedSectionName>
                     <MemoizedContact></MemoizedContact>
                     <MemoizedFooter></MemoizedFooter>
