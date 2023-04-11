@@ -30,8 +30,8 @@ export const ProjectDetailsRight = (props) => {
                     <img src={img} className="project-images-img" id='img1' alt='img1'></img>
                 </Box>
                 <Box className="project-details-container text-align-right">
-                    <span className="project-number animate-text-right">{number}</span>
-                    <Box className="project-details-content-right">
+                    <span className="project-number animate-text-right  animate-specific-mobile-text">{number}</span>
+                    <Box className="project-details-content-right  animate-specific-mobile-text">
                         <Box className='project-wrapper-box'>
                             <span className="project-title animate-text-right">{title}</span>
                         </Box>

@@ -26,8 +26,8 @@ export const ProjectDetails = (props) => {
         <>
             <Box className='project-details-outer-container'>
                 <Box className="project-details-container">
-                    <span className="project-number animate-text">{number}</span>
-                    <Box className="project-details-content">
+                    <span className="project-number animate-text  animate-specific-mobile-text">{number}</span>
+                    <Box className="project-details-content  animate-specific-mobile-text">
                         <Box className='project-wrapper-box'>
                             <span className="project-title animate-text">{title}</span>
                         </Box>
