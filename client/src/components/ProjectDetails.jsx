@@ -11,10 +11,10 @@ export const ProjectDetails = (props) => {
     const { number, title, techstack, description, img } = props;
 
     const handleDispatch = () => {
-        if (number == "01") {
+        if (number === "01") {
             dispatch(changeValue(0));
         }
-        else if (number == "02") {
+        else if (number === "02") {
             dispatch(changeValue(1));
         }
         else {

@@ -28,28 +28,28 @@ export const Contact = () => {
         }
     })
 
-    const submitData = async (e)=>{
+    const submitData = async (e) => {
         e.preventDefault();
-        const {name, email, message} = details;
+        const { name, email, message } = details;
 
         const res = await fetch("http://localhost:3300/sendmessage", {
-            method : "POST",
-            headers : {
-                "Content-Type" : "application/json"
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
             },
-            body : JSON.stringify({
+            body: JSON.stringify({
                 name, email, message
             })
         });
 
         const data = await res.json();
-        if(res.status === 201 && data){
+        if (res.status === 201 && data) {
             window.alert(res.status, " Message Sent Successfully!");
             setDetails({
-                name : "", email : "", message : ""
-            })   
+                name: "", email: "", message: ""
+            })
         }
-        else{
+        else {
             window.alert(res.status, " Message Sent Failed!");
             console.log(data);
         }
@@ -74,10 +74,18 @@ export const Contact = () => {
                                         <span> Let's connect</span>
                                     </Box>
                                     <Box className='contact-icon-box'>
-                                        <FaLinkedin className='contact-icon'></FaLinkedin>
-                                        <FaGithub className='contact-icon'></FaGithub>
-                                        <FaDribbbleSquare className='contact-icon'></FaDribbbleSquare>
-                                        <FaEnvelope className='contact-icon'></FaEnvelope>
+                                        <a href='https://www.linkedin.com/in/aditya-giri-948420226/' target='_blank'>
+                                            <FaLinkedin className='contact-icon'></FaLinkedin>
+                                        </a>
+                                        <a href='https://github.com/aditya-464' target='_blank'>
+                                            <FaGithub className='contact-icon'></FaGithub>
+                                        </a>
+                                        <a href='https://dribbble.com/adityagiri01' target='_blank'>
+                                            <FaDribbbleSquare className='contact-icon'></FaDribbbleSquare>
+                                        </a>
+                                        <a href='mailto:adityagiri1911@gmail.com' target='_blank'>
+                                            <FaEnvelope className='contact-icon'></FaEnvelope>
+                                        </a>
                                     </Box>
                                 </>}
                         </Box>
@@ -102,7 +110,7 @@ export const Contact = () => {
                                     <textarea type="text" name="message" rows="7" cols="10" value={details.message} onChange={handleInputs} required />
                                 </label>
                                 <label className='contact-form-label'>
-                                    <input className='contact-form-btn' type="submit" value="Submit" onClick={submitData}/>
+                                    <input className='contact-form-btn' type="submit" value="Submit" onClick={submitData} />
                                 </label>
                             </form>}
                         </Box>
