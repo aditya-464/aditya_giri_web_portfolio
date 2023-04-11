@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useSelector } from "react-redux"
+import { useNavigate } from "react-router-dom"
 import { Box, Button, Text } from '@chakra-ui/react'
 import { FaArrowLeft } from "react-icons/fa";
 import img1 from "../images/pap_mob2.png"
@@ -8,10 +9,13 @@ import img3 from "../images/pap_tab.png"
 import img4 from "../images/txt_mob.png"
 import img5 from "../images/txt_lap.png"
 import img6 from "../images/txt_tab.png"
+import img7 from "../images/race_lap1.png"
+import img8 from "../images/race_mob.png"
+import img9 from "../images/race_lap2.png"
 import MemoizedSectionName from "./SectionName"
 import { details as contentArray } from "./ContentArray"
 
-const Comp1 = () => {
+const Comp0 = () => {
     return (
         <Box className='proj-details-full-image-content'>
             <img src={img1} className='imgFull1' alt='img1'></img>
@@ -21,7 +25,7 @@ const Comp1 = () => {
     )
 }
 
-const Comp2 = () => {
+const Comp1 = () => {
     return (
         <Box className='proj-details-full-image-content'>
             <img src={img4} className='imgFull1' alt='img1'></img>
@@ -31,15 +35,15 @@ const Comp2 = () => {
     )
 }
 
-// const Comp3 = () => {
-//     return (
-//         <Box className='proj-details-full-image-content'>
-//             <img src={img7} className='imgFull1' alt='img1'></img>
-//             <img src={img8} className='imgFull2' alt='img2'></img>
-//             <img src={img9} className='imgFull3' alt='img3'></img>
-//         </Box>
-//     )
-// }
+const Comp2 = () => {
+    return (
+        <Box className='proj-details-full-image-content'>
+            <img src={img7} className='imgFull1' alt='img1'></img>
+            <img src={img8} className='imgFull2' alt='img2'></img>
+            <img src={img9} className='imgFull3' alt='img3'></img>
+        </Box>
+    )
+}
 
 
 export const ProjectDetailsFull = () => {
@@ -52,6 +56,7 @@ export const ProjectDetailsFull = () => {
         image: false, text: false
     });
 
+    const navigate = useNavigate();
     const { value } = useSelector((state) => state.projInd);
 
     const mark1Ref = useRef(null);
@@ -87,12 +92,12 @@ export const ProjectDetailsFull = () => {
         }
     })
 
-    
+
 
     return (
         <>
             <Box className="project-details-full-container">
-                <Button className='project-details-full-back'><FaArrowLeft ></FaArrowLeft></Button>
+                <Button className='project-details-full-back' onClick={() => navigate(-1)}><FaArrowLeft ></FaArrowLeft></Button>
                 {showContent && <>
                     <Box className='project-details-full-hero'>
                         <Text className='project-details-full-title'><span className='text-animate'>{contentArray[value].projectTitle}</span></Text>
@@ -101,7 +106,11 @@ export const ProjectDetailsFull = () => {
                     <MemoizedSectionName name="Images"></MemoizedSectionName>
                     <Box className='proj-details-full-image-container'>
                         <Box ref={mark1Ref} className='projFullMark1'></Box>
-                        {showItem.image && <Comp1/>}
+                        {showItem.image &&
+                            <>
+                                {(value === 0) ? <Comp0 /> : (value === 1) ? <Comp1 /> : <Comp2 />}
+                            </>
+                        }
                     </Box>
                     <MemoizedSectionName name="Description"></MemoizedSectionName>
                     <Box className='project-details-full-description-container'>
@@ -111,7 +120,7 @@ export const ProjectDetailsFull = () => {
                     </Box>
                 </>}
 
-            </Box>
+            </Box >
         </>
     )
 }

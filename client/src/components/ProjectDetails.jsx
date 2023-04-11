@@ -8,16 +8,16 @@ import PropTypes from 'prop-types';
 export const ProjectDetails = (props) => {
     const dispatch = useDispatch();
 
-    const { number, title, techstack, description, img1, img2 } = props;
+    const { number, title, techstack, description, img } = props;
 
-    const handleDispatch = ()=>{
-        if(number=="01"){
+    const handleDispatch = () => {
+        if (number == "01") {
             dispatch(changeValue(0));
         }
-        else if(number=="02"){
+        else if (number == "02") {
             dispatch(changeValue(1));
         }
-        else{
+        else {
             dispatch(changeValue(2));
         }
     }
@@ -43,8 +43,7 @@ export const ProjectDetails = (props) => {
                     </Box>
                 </Box>
                 <Box className="project-images-container">
-                    <img src={img1} className="project-images-img" id='img1' alt='img1'></img>
-                    <img src={img2} className="project-images-img" id='img2' alt='img2'></img>
+                    <img src={img} className="project-images-img" id='img1' alt='img1'></img>
                 </Box>
             </Box>
         </>

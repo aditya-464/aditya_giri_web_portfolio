@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 export const ProjectDetailsRight = (props) => {
     const dispatch = useDispatch();
 
-    const { number, title, techstack, description, img1, img2 } = props;
+    const { number, title, techstack, description, img } = props;
 
     const handleDispatch = () => {
         if (number == "01") {
@@ -27,8 +27,7 @@ export const ProjectDetailsRight = (props) => {
         <>
             <Box className='project-details-outer-container-right'>
                 <Box className="project-images-container-right">
-                    <img src={img1} className="project-images-img" id='img1' alt='img1'></img>
-                    <img src={img2} className="project-images-img" id='img2' alt='img2'></img>
+                    <img src={img} className="project-images-img" id='img1' alt='img1'></img>
                 </Box>
                 <Box className="project-details-container text-align-right">
                     <span className="project-number animate-text-right">{number}</span>

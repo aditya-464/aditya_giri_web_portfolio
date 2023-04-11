@@ -1,99 +1,76 @@
-import { Box, border } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
 import React, { useState, useRef, useEffect } from 'react'
 import { MemoizedProjectDetails } from './ProjectDetails'
 import { MemoizedProjectDetailsRight } from './ProjectDetailsRight'
-import img1 from "../images/pap_lap.png"
-import img2 from "../images/pap_mob1.png"
+import img1 from "../images/pap_mob2.png"
+import img2 from "../images/txt_tab.png"
+import img3 from "../images/race_lap1.png"
 import { details } from "./ContentArray"
 
 export const Project = () => {
-  const [showItems, setShowItems] = useState(false);
-  const [component, setComponent] = useState(0);
+  const [showItems, setShowItems] = useState({
+    proj0: false, proj1: false, proj2: false,
+  });
   const [deviceView, setDeviceView] = useState({
     width: "",
     height: ""
   });
 
   const cmp1Ref = useRef(null);
-  const cmp2Ref = useRef(null);
   const cmp3Ref = useRef(null);
-  const cmp4Ref = useRef(null);
   const cmp5Ref = useRef(null);
-  const cmp6Ref = useRef(null);
-  const cmpVal = (value) => {
-    setComponent(value);
-  }
-  const cmpFunc = (value) => {
-    setShowItems(value);
-  }
 
   useEffect(() => {
     let w = window.innerWidth;
     let h = window.innerHeight;
-    setDeviceView({ width: w, height: h });    
+    setDeviceView({ width: w, height: h });
   }, [])
 
-  function refValue(value) {
-    switch (value) {
-      case 1:
-        return cmp1Ref;
-      case 2:
-        return cmp2Ref;
-      case 3:
-        return cmp3Ref;
-      case 4:
-        return cmp4Ref;
-      case 5:
-        return cmp5Ref;
-      default:
-        return cmp6Ref;
-    }
-  }
   window.addEventListener("scroll", () => {
-    if (!cmp1Ref.current || !cmp2Ref.current || !cmp3Ref.current || !cmp4Ref.current || !cmp5Ref.current || !cmp6Ref.current) {
+    if (!cmp1Ref.current || !cmp3Ref.current || !cmp5Ref.current) {
       return;
     }
     const val1 = cmp1Ref.current.getBoundingClientRect().top;
-    const val2 = cmp2Ref.current.getBoundingClientRect().top;
     const val3 = cmp3Ref.current.getBoundingClientRect().top;
-    const val4 = cmp4Ref.current.getBoundingClientRect().top;
     const val5 = cmp5Ref.current.getBoundingClientRect().top;
-    const val6 = cmp6Ref.current.getBoundingClientRect().top;
-
-    if ((val1 <= 0.25 * deviceView.height && val2 >= 0.3 * deviceView.height) || (val3 <= 0.25 * deviceView.height && val4 >= 0.3 * deviceView.height) || (val5 <= 0.25 * deviceView.height && val6 >= 0.3 * deviceView.height)) {
-      cmpFunc(true);
-      if (val1 <= 0.25 * deviceView.height && val2 >= 0.3 * deviceView.height) {
-        cmpVal(0);
-      }
-      else if (val3 <= 0.25 * deviceView.height && val4 >= 0.3 * deviceView.height) {
-        cmpVal(1);
-      }
-      else {
-        cmpVal(2);
-      }
+    if (val1 <= 0.25 * deviceView.height) {
+      setShowItems({ ...showItems, proj0: true });
     }
+    if (val3 <= 0.25 * deviceView.height) {
+      setShowItems({ ...showItems, proj1: true });
+    }
+    if (val5 <= 0.25 * deviceView.height) {
+      setShowItems({ ...showItems, proj2: true });
+    }
+
   });
 
   return (
     <>
       <Box className='project-container' id='project'>
-        {
-          details.map((value, index) => {
-            return (
-              <React.Fragment key={index + 10}>
-                <Box className='project-outer-box'>
-                  <Box ref={refValue(2 * index + 1)} className={`markUp mark-${2 * index + 1}`}></Box>
+        <Box className='project-outer-box'>
+          <Box ref={cmp1Ref} className={`markUp mark-1`}></Box>
+          {showItems.proj0 && <Box className='project-inner-box'>
+            <MemoizedProjectDetails number={details[0].projectNumber} title={details[0].projectTitle} techstack={details[0].projectTechstack} description={details[0].projectShortDesc} img={img1} ></MemoizedProjectDetails>
+          </Box>}
+          <Box className={`markDn mark-2`}></Box>
+        </Box>
 
-                  <Box className='project-inner-box'>
-                    {(index % 2 === 0) ? (component === index) && showItems && <MemoizedProjectDetails number={value.projectNumber} title={value.projectTitle} techstack={value.projectTechstack} description={value.projectShortDesc} img1={img1} img2={img2}></MemoizedProjectDetails> : (component === index) && showItems && <MemoizedProjectDetailsRight number={value.projectNumber} title={value.projectTitle} techstack={value.projectTechstack} description={value.projectShortDesc} img1={img1} img2={img2}></MemoizedProjectDetailsRight>}
-                  </Box>
+        <Box className='project-outer-box'>
+          <Box ref={cmp3Ref} className={`markUp mark-3`}></Box>
+          {showItems.proj1 && <Box className='project-inner-box'>
+            <MemoizedProjectDetailsRight number={details[1].projectNumber} title={details[1].projectTitle} techstack={details[1].projectTechstack} description={details[1].projectShortDesc} img={img2} ></MemoizedProjectDetailsRight>
+          </Box>}
+          <Box className={`markDn mark-4`}></Box>
+        </Box>
 
-                  <Box ref={refValue(2 * index + 2)} className={`markDn mark-${2 * index + 2}`}></Box>
-                </Box>
-              </React.Fragment>
-            )
-          })
-        }
+        <Box className='project-outer-box'>
+          <Box ref={cmp5Ref} className={`markUp mark-5`}></Box>
+          {showItems.proj2 && <Box className='project-inner-box'>
+            <MemoizedProjectDetails number={details[2].projectNumber} title={details[2].projectTitle} techstack={details[2].projectTechstack} description={details[2].projectShortDesc} img={img3}></MemoizedProjectDetails>
+          </Box>}
+          <Box className={`markDn mark-6`}></Box>
+        </Box>
       </Box>
     </>
   )
