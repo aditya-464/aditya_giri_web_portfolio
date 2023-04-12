@@ -30,7 +30,7 @@ export const Contact = () => {
     const submitData = async (e) => {
         e.preventDefault();
         const { name, email, message } = details;
-        const res = await fetch("http://localhost:3300/sendmessage", {
+        const res = await fetch("https://agwebportfoliosvr.onrender.com/sendmessage", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
