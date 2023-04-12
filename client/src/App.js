@@ -1,8 +1,6 @@
-import "./components/portfolio.css"
+import "./App.css"
 import { Routes, Route } from "react-router-dom"
 import { lazy, Suspense } from "react";
-// import MemoizedHomePage from "./components/HomePage"
-// import MemoizedProjectDetailsFull from "./components/ProjectDetailsFull";
 const MemoizedHomePage = lazy(() => import('./components/HomePage'));
 const MemoizedProjectDetailsFull = lazy(() => import('./components/ProjectDetailsFull'));
 function App() {
