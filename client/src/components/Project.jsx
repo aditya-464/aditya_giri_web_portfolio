@@ -6,7 +6,6 @@ import img1 from "../images/pap_mob2.png"
 import img2 from "../images/txt_tab.png"
 import img3 from "../images/race_lap1.png"
 import { details } from "./ContentArray"
-
 export const Project = () => {
   const [showItems, setShowItems] = useState({
     proj0: false, proj1: false, proj2: false,
@@ -15,17 +14,14 @@ export const Project = () => {
     width: "",
     height: ""
   });
-
   const cmp1Ref = useRef(null);
   const cmp3Ref = useRef(null);
   const cmp5Ref = useRef(null);
-
   useEffect(() => {
     let w = window.innerWidth;
     let h = window.innerHeight;
     setDeviceView({ width: w, height: h });
   }, [])
-
   window.addEventListener("scroll", () => {
     if (!cmp1Ref.current || !cmp3Ref.current || !cmp5Ref.current) {
       return;
@@ -42,9 +38,7 @@ export const Project = () => {
     if (val5 <= 0.25 * deviceView.height) {
       setShowItems({ ...showItems, proj2: true });
     }
-
   });
-
   return (
     <>
       <Box className='project-container' id='project'>
@@ -55,7 +49,6 @@ export const Project = () => {
           </Box>}
           <Box className={`markDn mark-2`}></Box>
         </Box>
-
         <Box className='project-outer-box'>
           <Box ref={cmp3Ref} className={`markUp mark-3`}></Box>
           {showItems.proj1 && <Box className='project-inner-box'>
@@ -63,7 +56,6 @@ export const Project = () => {
           </Box>}
           <Box className={`markDn mark-4`}></Box>
         </Box>
-
         <Box className='project-outer-box'>
           <Box ref={cmp5Ref} className={`markUp mark-5`}></Box>
           {showItems.proj2 && <Box className='project-inner-box'>

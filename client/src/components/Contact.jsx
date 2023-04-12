@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { Box, Text } from '@chakra-ui/react'
 import { FaLinkedin, FaGithub, FaDribbbleSquare, FaEnvelope } from "react-icons/fa";
-
 export const Contact = () => {
     const [showItem, setShowItem] = useState(false);
     const [details, setDetails] = useState({
@@ -27,11 +26,9 @@ export const Contact = () => {
             contactFunc(true);
         }
     })
-
     const submitData = async (e) => {
         e.preventDefault();
         const { name, email, message } = details;
-
         const res = await fetch("http://localhost:3300/sendmessage", {
             method: "POST",
             headers: {
@@ -41,7 +38,6 @@ export const Contact = () => {
                 name, email, message
             })
         });
-
         const data = await res.json();
         if (res.status === 201 && data) {
             window.alert(res.status, " Message Sent Successfully!");
@@ -53,11 +49,7 @@ export const Contact = () => {
             window.alert(res.status, " Message Sent Failed!");
             console.log(data);
         }
-
     }
-
-
-
     return (
         <>
             <Box className='contact-container' id='contact'>

@@ -15,7 +15,6 @@ import img8 from "../images/race_mob.png"
 import img9 from "../images/race_lap2.png"
 import MemoizedSectionName from "./SectionName"
 import { details as contentArray } from "./ContentArray"
-
 const Comp0 = () => {
     return (
         <Box className='proj-details-full-image-content'>
@@ -25,7 +24,6 @@ const Comp0 = () => {
         </Box>
     )
 }
-
 const Comp1 = () => {
     return (
         <Box className='proj-details-full-image-content'>
@@ -35,7 +33,6 @@ const Comp1 = () => {
         </Box>
     )
 }
-
 const Comp2 = () => {
     return (
         <Box className='proj-details-full-image-content'>
@@ -45,10 +42,7 @@ const Comp2 = () => {
         </Box>
     )
 }
-
-
 export const ProjectDetailsFull = () => {
-
     const [showContent, setShowContent] = useState(false);
     const [viewport, setViewport] = useState({
         width: "", height: ""
@@ -56,28 +50,20 @@ export const ProjectDetailsFull = () => {
     const [showItem, setShowItem] = useState({
         image: false, text: false
     });
-
     const navigate = useNavigate();
     const { value } = useSelector((state) => state.projInd);
-
     const mark1Ref = useRef(null);
     const mark2Ref = useRef(null);
-
     useEffect(() => {
         let w = window.innerWidth;
         let h = window.innerHeight;
-
         setViewport({
             width: w, height: h
         })
-
         setTimeout(() => {
             setShowContent(true);
         }, 1200);
-
     }, [])
-
-
     window.addEventListener("scroll", () => {
         if (mark1Ref == null || mark2Ref == null) {
             return;
@@ -92,9 +78,6 @@ export const ProjectDetailsFull = () => {
             setShowItem({ ...showItem, text: true });
         }
     })
-
-
-
     return (
         <>
             <Box className="project-details-full-container">
@@ -125,7 +108,5 @@ export const ProjectDetailsFull = () => {
         </>
     )
 }
-
-
 var MemoizedProjectDetailsFull;
 export default MemoizedProjectDetailsFull = React.memo(ProjectDetailsFull);

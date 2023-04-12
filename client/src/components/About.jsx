@@ -1,6 +1,5 @@
 import { Box, Text } from '@chakra-ui/react'
 import React, { useRef, useState } from 'react'
-
 export const About = () => {
   const [showItem, setShowItem] = useState(false);
   const markRef1 = useRef(null);
@@ -18,7 +17,6 @@ export const About = () => {
       aboutFunc(true);
     }
   })
-
   return (
     <>
       <Box className="about-container" id='about'>

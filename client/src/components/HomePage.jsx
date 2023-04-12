@@ -9,7 +9,6 @@ const MemoizedContact = lazy(() => import('./Contact'));
 const MemoizedFooter = lazy(() => import('./Footer'));
 const MemoizedAbout = lazy(() => import('./About'));
 const MemoizedProjectDetailsFull = lazy(() => import('./ProjectDetailsFull'));
-
 export const HomePage = () => {
     return (
         <>
@@ -30,6 +29,5 @@ export const HomePage = () => {
         </>
     )
 }
-
 var MemoizedHomePage;
 export default MemoizedHomePage = React.memo(HomePage);

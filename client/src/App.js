@@ -1,9 +1,7 @@
-// import './App.css';
 import "./components/portfolio.css"
 import { Routes, Route } from "react-router-dom"
 import MemoizedHomePage from "./components/HomePage"
 import MemoizedProjectDetailsFull from "./components/ProjectDetailsFull";
-
 function App() {
   return (
     <>

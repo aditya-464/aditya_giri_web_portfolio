@@ -1,7 +1,6 @@
 import { Box, Text } from '@chakra-ui/react'
 import React, { useState } from 'react'
 import { useRef } from 'react';
-
 export const Skills = () => {
     const [showItem, setShowItem] = useState(false);
     const skillRef1 = useRef(null);
@@ -19,7 +18,6 @@ export const Skills = () => {
             skillFunc(true);
         }
     })
-
     return (
         <>
             <Box className='skills-container' id='skills'>

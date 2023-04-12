@@ -1,9 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
-
 const initialState = {
   value: -1,
 }
-
 export const projectIndexSlice = createSlice({
   name: 'projInd',
   initialState,
@@ -13,8 +11,5 @@ export const projectIndexSlice = createSlice({
     },
   },
 })
-
-// Action creators are generated for each case reducer function
 export const { changeValue } = projectIndexSlice.actions
-
 export default projectIndexSlice.reducer

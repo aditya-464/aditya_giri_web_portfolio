@@ -5,13 +5,9 @@ import { changeValue } from '../redux/projectIndex';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Box} from '@chakra-ui/react'
 import PropTypes from 'prop-types';
-
-
 export const ProjectDetailsRight = (props) => {
     const dispatch = useDispatch();
-
     const { number, title, techstack, description, img } = props;
-
     const handleDispatch = () => {
         if (number === "01") {
             dispatch(changeValue(0));
@@ -23,7 +19,6 @@ export const ProjectDetailsRight = (props) => {
             dispatch(changeValue(2));
         }
     }
-
     return (
         <>
             <Box className='project-details-outer-container-right'>

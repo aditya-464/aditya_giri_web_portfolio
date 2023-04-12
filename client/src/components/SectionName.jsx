@@ -1,7 +1,6 @@
 import { Box, Text } from '@chakra-ui/react'
 import React, { useState } from 'react'
 import { useRef } from 'react'
-
 export const SectionName = (props) => {
   const [showItem, setShowItem] = useState(false);
   const mySecRef1 = useRef(null);
@@ -19,7 +18,6 @@ export const SectionName = (props) => {
       secFunc(true);
     }
   })
-
   return (
     <>
       <Box className='section-name-container' id='section-name'>

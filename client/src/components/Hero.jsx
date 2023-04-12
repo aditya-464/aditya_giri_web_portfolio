@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import heroIcon from "../images/AGhero.svg"
 import { Box } from '@chakra-ui/react'
-
 export const Hero = () => {
   const [showItem, setShowItem] = useState(false);
-
   const heroFunc = (value) => {
     setShowItem(value);
   }
@@ -12,9 +10,7 @@ export const Hero = () => {
     setTimeout(() => {
       heroFunc(true);
     }, 100);
-
   }, []);
-
   return (
     <>
       <Box className='hero-container' id="hero">
