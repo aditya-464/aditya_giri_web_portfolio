@@ -13,6 +13,7 @@ export const Contact = () => {
     }
     const contactRef1 = useRef(null);
     const contactRef2 = useRef(null);
+    const btnRef = useRef("Submit");
     const contactFunc = (value) => {
         setShowItem(value);
     }
@@ -40,13 +41,16 @@ export const Contact = () => {
         });
         const data = await res.json();
         if (res.status === 201 && data) {
-            window.alert(res.status, " Message Sent Successfully!");
             setDetails({
                 name: "", email: "", message: ""
             })
+            btnRef.current.value = "Sent";
+            setTimeout(() => {
+                btnRef.current.value = "Submit";
+            }, 3000);
         }
         else {
-            window.alert(res.status, " Message Sent Failed!");
+            window.alert("Message Sent Failed!");
             console.log(data);
         }
     }
@@ -102,7 +106,7 @@ export const Contact = () => {
                                     <textarea type="text" name="message" rows="7" cols="10" value={details.message} onChange={handleInputs} required />
                                 </label>
                                 <label className='contact-form-label'>
-                                    <input className='contact-form-btn' type="submit" value="Submit" onClick={submitData} />
+                                    <input ref={btnRef} className='contact-form-btn' type="submit" value={btnRef.current.value} onClick={submitData} />
                                 </label>
                             </form>}
                         </Box>
