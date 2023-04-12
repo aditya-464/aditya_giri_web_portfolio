@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-
 const clientDetailsSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -20,6 +19,5 @@ const clientDetailsSchema = new mongoose.Schema({
 }, {
     collection : "myPortfolioCollection"
 });
-
 const Client = mongoose.model("Client", clientDetailsSchema);
 module.exports = Client;

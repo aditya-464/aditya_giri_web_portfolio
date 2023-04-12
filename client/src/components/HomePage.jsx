@@ -8,7 +8,6 @@ const MemoizedSkills = lazy(() => import('./Skills'));
 const MemoizedContact = lazy(() => import('./Contact'));
 const MemoizedFooter = lazy(() => import('./Footer'));
 const MemoizedAbout = lazy(() => import('./About'));
-const MemoizedProjectDetailsFull = lazy(() => import('./ProjectDetailsFull'));
 export const HomePage = () => {
     return (
         <>
