@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import heroIcon from "../images/AGhero.svg"
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Box } from '@chakra-ui/react'
 export const Hero = () => {
   const [showItem, setShowItem] = useState(false);
@@ -26,7 +27,7 @@ export const Hero = () => {
               </Box>
             </Box>
             <Box className='hero-icon'>
-              <img src={heroIcon} alt="HeroIcon" />
+              <LazyLoadImage src={heroIcon} alt="HeroIcon" />
             </Box>
           </Box>}
       </Box>

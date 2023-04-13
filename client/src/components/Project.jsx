@@ -2,9 +2,9 @@ import { Box } from '@chakra-ui/react'
 import React, { useState, useRef, useEffect } from 'react'
 import { MemoizedProjectDetails } from './ProjectDetails'
 import { MemoizedProjectDetailsRight } from './ProjectDetailsRight'
-import img1 from "../images/pap_mob2.png"
-import img2 from "../images/txt_tab.png"
-import img3 from "../images/race_lap1.png"
+import img1 from "../images/pap_mob2.jpg"
+import img2 from "../images/txt_tab.jpg"
+import img3 from "../images/race_lap1.jpg"
 import { details } from "./ContentArray"
 export const Project = () => {
   const [showItems, setShowItems] = useState({
