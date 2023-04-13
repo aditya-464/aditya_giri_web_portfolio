@@ -15,33 +15,33 @@ import img8 from "../images/race_mob.jpg"
 import img9 from "../images/race_lap2.jpg"
 import MemoizedSectionName from "./SectionName"
 import { details as contentArray } from "./ContentArray"
-const Comp0 = () => {
-    return (
-        <Box className='proj-details-full-image-content'>
-            <LazyLoadImage src={img1} className='imgFull1' alt='img1'></LazyLoadImage>
-            <LazyLoadImage src={img2} className='imgFull2' alt='img2'></LazyLoadImage>
-            <LazyLoadImage src={img3} className='imgFull3' alt='img3'></LazyLoadImage>
-        </Box>
-    )
-}
-const Comp1 = () => {
-    return (
-        <Box className='proj-details-full-image-content'>
-            <LazyLoadImage src={img4} className='imgFull1' alt='img1'></LazyLoadImage>
-            <LazyLoadImage src={img5} className='imgFull2' alt='img2'></LazyLoadImage>
-            <LazyLoadImage src={img6} className='imgFull3' alt='img3'></LazyLoadImage>
-        </Box>
-    )
-}
-const Comp2 = () => {
-    return (
-        <Box className='proj-details-full-image-content'>
-            <LazyLoadImage src={img7} className='imgFull1' alt='img1'></LazyLoadImage>
-            <LazyLoadImage src={img8} className='imgFull2' alt='img2'></LazyLoadImage>
-            <LazyLoadImage src={img9} className='imgFull3' alt='img3'></LazyLoadImage>
-        </Box>
-    )
-}
+// const Comp0 = () => {
+//     return (
+//         <Box className='proj-details-full-image-content'>
+//             <LazyLoadImage src={img1} className='imgFull1' alt='img1'></LazyLoadImage>
+//             <LazyLoadImage src={img2} className='imgFull2' alt='img2'></LazyLoadImage>
+//             <LazyLoadImage src={img3} className='imgFull3' alt='img3'></LazyLoadImage>
+//         </Box>
+//     )
+// }
+// const Comp1 = () => {
+//     return (
+//         <Box className='proj-details-full-image-content'>
+//             <LazyLoadImage src={img4} className='imgFull1' alt='img1'></LazyLoadImage>
+//             <LazyLoadImage src={img5} className='imgFull2' alt='img2'></LazyLoadImage>
+//             <LazyLoadImage src={img6} className='imgFull3' alt='img3'></LazyLoadImage>
+//         </Box>
+//     )
+// }
+// const Comp2 = () => {
+//     return (
+//         <Box className='proj-details-full-image-content'>
+//             <LazyLoadImage src={img7} className='imgFull1' alt='img1'></LazyLoadImage>
+//             <LazyLoadImage src={img8} className='imgFull2' alt='img2'></LazyLoadImage>
+//             <LazyLoadImage src={img9} className='imgFull3' alt='img3'></LazyLoadImage>
+//         </Box>
+//     )
+// }
 export const ProjectDetailsFull = () => {
     const [showContent, setShowContent] = useState(false);
     const [viewport, setViewport] = useState({
@@ -92,7 +92,19 @@ export const ProjectDetailsFull = () => {
                         <Box ref={mark1Ref} className='projFullMark1'></Box>
                         {showItem.image &&
                             <>
-                                {(value === 0) ? <Comp0 /> : (value === 1) ? <Comp1 /> : <Comp2 />}
+                                {(value === 0) ? <Box className='proj-details-full-image-content'>
+                                    <LazyLoadImage src={img1} className='imgFull1' alt='img1'></LazyLoadImage>
+                                    <LazyLoadImage src={img2} className='imgFull2' alt='img2'></LazyLoadImage>
+                                    <LazyLoadImage src={img3} className='imgFull3' alt='img3'></LazyLoadImage>
+                                </Box> : (value === 1) ? <Box className='proj-details-full-image-content'>
+                                    <LazyLoadImage src={img4} className='imgFull1' alt='img1'></LazyLoadImage>
+                                    <LazyLoadImage src={img5} className='imgFull2' alt='img2'></LazyLoadImage>
+                                    <LazyLoadImage src={img6} className='imgFull3' alt='img3'></LazyLoadImage>
+                                </Box> : <Box className='proj-details-full-image-content'>
+                                    <LazyLoadImage src={img7} className='imgFull1' alt='img1'></LazyLoadImage>
+                                    <LazyLoadImage src={img8} className='imgFull2' alt='img2'></LazyLoadImage>
+                                    <LazyLoadImage src={img9} className='imgFull3' alt='img3'></LazyLoadImage>
+                                </Box>}
                             </>
                         }
                     </Box>
