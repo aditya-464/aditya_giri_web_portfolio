@@ -44,14 +44,20 @@ export const Contact = () => {
             setDetails({
                 name: "", email: "", message: ""
             })
+            btnRef.current.style.color = "#66DE93";
             btnRef.current.value = "Sent";
             setTimeout(() => {
+                btnRef.current.style.color = "#FFE5B4";
                 btnRef.current.value = "Submit";
             }, 3000);
         }
         else {
-            window.alert("Message Sent Failed!");
-            console.log(data);
+            btnRef.current.style.color = "#F37878";
+            btnRef.current.value = "Error";
+            setTimeout(() => {
+                btnRef.current.style.color = "#FFE5B4";
+                btnRef.current.value = "Submit";
+            }, 3000);
         }
     }
     return (
@@ -106,7 +112,7 @@ export const Contact = () => {
                                     <textarea type="text" name="message" rows="7" cols="10" value={details.message} onChange={handleInputs} required />
                                 </label>
                                 <label className='contact-form-label'>
-                                    <input ref={btnRef} className='contact-form-btn' type="submit" value={btnRef.current.value} onClick={submitData} />
+                                    <input ref={btnRef} className='contact-form-btn' type="submit" value={btnRef.current.value || "Submit"} onClick={submitData} />
                                 </label>
                             </form>}
                         </Box>
