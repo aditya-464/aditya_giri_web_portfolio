@@ -65,7 +65,7 @@ export const ProjectDetailsFull = () => {
         }, 1200);
     }, [])
     window.addEventListener("scroll", () => {
-        if (mark1Ref == null || mark2Ref == null) {
+        if (!mark1Ref.current || !mark2Ref.current) {
             return;
         }
         const val1 = mark1Ref.current.getBoundingClientRect().top;
