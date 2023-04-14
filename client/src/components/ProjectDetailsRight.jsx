@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom"
 import { useDispatch } from "react-redux"
 import { changeValue } from '../redux/projectIndex';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import { Box} from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
 import PropTypes from 'prop-types';
 export const ProjectDetailsRight = (props) => {
     const dispatch = useDispatch();
@@ -37,7 +37,7 @@ export const ProjectDetailsRight = (props) => {
                         <Box className='project-wrapper-box'>
                             <span className='project-description animate-text-right'>{description}</span>
                         </Box>
-                        <button className='project-details-btn animate-text-right' onClick={handleDispatch}><NavLink to="/projDetail">View More</NavLink></button>
+                        <NavLink to="/projDetail"><button className='project-details-btn animate-text-right' onClick={handleDispatch}>View More</button></NavLink>
                     </Box>
                 </Box>
             </Box>

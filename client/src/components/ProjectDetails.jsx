@@ -34,9 +34,9 @@ export const ProjectDetails = (props) => {
                         <Box className='project-wrapper-box'>
                             <span className='project-description animate-text'>{description}</span>
                         </Box>
-                        <button className='project-details-btn animate-text' onClick={handleDispatch}>
-                            <NavLink to="/projDetail">View More</NavLink>
-                        </button>
+                        <NavLink to="/projDetail"><button className='project-details-btn animate-text' onClick={handleDispatch}>
+                            View More
+                        </button></NavLink>
                     </Box>
                 </Box>
                 <Box className="project-images-container">
