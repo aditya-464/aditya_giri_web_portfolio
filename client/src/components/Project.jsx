@@ -29,13 +29,13 @@ export const Project = () => {
     const val1 = cmp1Ref.current.getBoundingClientRect().top;
     const val3 = cmp3Ref.current.getBoundingClientRect().top;
     const val5 = cmp5Ref.current.getBoundingClientRect().top;
-    if (val1 <= 0.25 * deviceView.height) {
+    if (val1 <= 0.35 * deviceView.height) {
       setShowItems({ ...showItems, proj0: true });
     }
-    if (val3 <= 0.25 * deviceView.height) {
+    if (val3 <= 0.35 * deviceView.height) {
       setShowItems({ ...showItems, proj1: true });
     }
-    if (val5 <= 0.25 * deviceView.height) {
+    if (val5 <= 0.35 * deviceView.height) {
       setShowItems({ ...showItems, proj2: true });
     }
   });

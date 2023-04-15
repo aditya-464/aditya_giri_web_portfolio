@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Box, Text } from '@chakra-ui/react'
 import { FaLinkedin, FaGithub, FaDribbbleSquare, FaEnvelope } from "react-icons/fa";
 export const Contact = () => {
@@ -6,24 +6,32 @@ export const Contact = () => {
     const [details, setDetails] = useState({
         name: "", email: "", message: ""
     })
+    const [viewport, setViewport] = useState({
+        width: "", height: ""
+    })
     const handleInputs = (e) => {
         let name = e.target.name;
         let value = e.target.value;
         setDetails({ ...details, [name]: value });
     }
     const contactRef1 = useRef(null);
-    const contactRef2 = useRef(null);
     const btnRef = useRef("Submit");
     const contactFunc = (value) => {
         setShowItem(value);
     }
+    useEffect(() => {
+        let w = window.innerWidth;
+        let h = window.innerHeight;
+        setViewport({
+            width: w, height: h
+        })
+    }, [])
     window.addEventListener("scroll", () => {
-        if (!contactRef1.current || !contactRef2.current) {
+        if (!contactRef1.current) {
             return;
         }
         const val1 = contactRef1.current.getBoundingClientRect().top;
-        const val2 = contactRef2.current.getBoundingClientRect().top;
-        if (val1 <= 100 && val2 >= 400) {
+        if (val1 <= 0.35*viewport.height) {
             contactFunc(true);
         }
     })
@@ -117,7 +125,6 @@ export const Contact = () => {
                             </form>}
                         </Box>
                     </Box>
-                    <Box ref={contactRef2} className='markContactDn'></Box>
                 </Box>
             </Box>
         </>

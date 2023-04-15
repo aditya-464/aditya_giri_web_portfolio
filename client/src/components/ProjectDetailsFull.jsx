@@ -47,12 +47,12 @@ export const ProjectDetailsFull = () => {
         const val1 = mark1Ref.current.getBoundingClientRect().top;
         const val2 = mark2Ref.current.getBoundingClientRect().top;
 
-        if (val1 <= 0.3 * viewport.height) {
+        if (val1 <= 0.5 * viewport.height) {
             img1Ref.current.classList.add("imgFull1-animate-specific");
             img2Ref.current.classList.add("imgFull2-animate-specific");
             img3Ref.current.classList.add("imgFull3-animate-specific");
         }
-        if (val2 <= 0.3 * viewport.height) {
+        if (val2 <= 0.5 * viewport.height) {
             setShowItem({ ...showItem, text: true });
         }
     })

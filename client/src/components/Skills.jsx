@@ -1,20 +1,28 @@
 import { Box, Text } from '@chakra-ui/react'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useRef } from 'react';
 export const Skills = () => {
     const [showItem, setShowItem] = useState(false);
+    const [viewport, setViewport] = useState({
+        width: "", height: ""
+    })
     const skillRef1 = useRef(null);
-    const skillRef2 = useRef(null);
     const skillFunc = (value) => {
         setShowItem(value);
     }
+    useEffect(() => {
+        let w = window.innerWidth;
+        let h = window.innerHeight;
+        setViewport({
+            width: w, height: h
+        })
+    }, [])
     window.addEventListener("scroll", () => {
-        if (!skillRef1.current || !skillRef2.current) {
+        if (!skillRef1.current) {
             return;
         }
         const val1 = skillRef1.current.getBoundingClientRect().top;
-        const val2 = skillRef2.current.getBoundingClientRect().top;
-        if (val1 <= 300 && val2 <= 600) {
+        if (val1 <= 0.5*viewport.height) {
             skillFunc(true);
         }
     })
@@ -41,7 +49,6 @@ export const Skills = () => {
                             <Text className="skills-text2"> UI Maintenance</Text>
                         </Box>
                     </Box>}
-                    <Box ref={skillRef2} className='markSkillDn'></Box>
                 </Box>
             </Box>
         </>

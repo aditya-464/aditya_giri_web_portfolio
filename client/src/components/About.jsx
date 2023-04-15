@@ -1,19 +1,27 @@
 import { Box, Text } from '@chakra-ui/react'
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 export const About = () => {
   const [showItem, setShowItem] = useState(false);
+  const [viewport, setViewport] = useState({
+    width: "", height: ""
+  })
   const markRef1 = useRef(null);
-  const markRef2 = useRef(null);
-  const aboutFunc = (value)=>{
+  const aboutFunc = (value) => {
     setShowItem(value);
   }
+  useEffect(() => {
+    let w = window.innerWidth;
+    let h = window.innerHeight;
+    setViewport({
+      width: w, height: h
+    })
+  }, [])
   window.addEventListener("scroll", () => {
-    if(!markRef1.current || !markRef2.current){
+    if (!markRef1.current) {
       return;
     }
     const val1 = markRef1.current.getBoundingClientRect().top;
-    const val2 = markRef2.current.getBoundingClientRect().top;
-    if(val1<=400){
+    if (val1 <= 0.5 * viewport.height) {
       aboutFunc(true);
     }
   })
@@ -26,7 +34,6 @@ export const About = () => {
             "  A web developer specializing in creating beautiful and functional websites for businesses. Utilizing programming expertise to deliver customized solutions that meet unique client needs. Dedicated to bringing visions to life! ❤️"
           </Text>
         </Box>}
-        <Box ref={markRef2} className='markAbout2'></Box>
       </Box>
     </>
   )
