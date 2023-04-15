@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom"
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+// import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Box, Button, Text } from '@chakra-ui/react'
 import { FaArrowLeft } from "react-icons/fa";
 import img1 from "../images/pap_mob2.jpg"
@@ -15,45 +15,21 @@ import img8 from "../images/race_mob.jpg"
 import img9 from "../images/race_lap2.jpg"
 import MemoizedSectionName from "./SectionName"
 import { details as contentArray } from "./ContentArray"
-// const Comp0 = () => {
-//     return (
-//         <Box className='proj-details-full-image-content'>
-//             <LazyLoadImage src={img1} className='imgFull1' alt='img1'></LazyLoadImage>
-//             <LazyLoadImage src={img2} className='imgFull2' alt='img2'></LazyLoadImage>
-//             <LazyLoadImage src={img3} className='imgFull3' alt='img3'></LazyLoadImage>
-//         </Box>
-//     )
-// }
-// const Comp1 = () => {
-//     return (
-//         <Box className='proj-details-full-image-content'>
-//             <LazyLoadImage src={img4} className='imgFull1' alt='img1'></LazyLoadImage>
-//             <LazyLoadImage src={img5} className='imgFull2' alt='img2'></LazyLoadImage>
-//             <LazyLoadImage src={img6} className='imgFull3' alt='img3'></LazyLoadImage>
-//         </Box>
-//     )
-// }
-// const Comp2 = () => {
-//     return (
-//         <Box className='proj-details-full-image-content'>
-//             <LazyLoadImage src={img7} className='imgFull1' alt='img1'></LazyLoadImage>
-//             <LazyLoadImage src={img8} className='imgFull2' alt='img2'></LazyLoadImage>
-//             <LazyLoadImage src={img9} className='imgFull3' alt='img3'></LazyLoadImage>
-//         </Box>
-//     )
-// }
 export const ProjectDetailsFull = () => {
     const [showContent, setShowContent] = useState(false);
     const [viewport, setViewport] = useState({
         width: "", height: ""
     })
     const [showItem, setShowItem] = useState({
-        image: false, text: false
+        text: false
     });
     const navigate = useNavigate();
     const { value } = useSelector((state) => state.projInd);
     const mark1Ref = useRef(null);
     const mark2Ref = useRef(null);
+    const img1Ref = useRef(null);
+    const img2Ref = useRef(null);
+    const img3Ref = useRef(null);
     useEffect(() => {
         let w = window.innerWidth;
         let h = window.innerHeight;
@@ -65,14 +41,16 @@ export const ProjectDetailsFull = () => {
         }, 1200);
     }, [])
     window.addEventListener("scroll", () => {
-        if (!mark1Ref.current || !mark2Ref.current) {
+        if (!mark1Ref.current || !mark2Ref.current || !img1Ref.current || !img2Ref.current || !img3Ref.current) {
             return;
         }
         const val1 = mark1Ref.current.getBoundingClientRect().top;
         const val2 = mark2Ref.current.getBoundingClientRect().top;
 
         if (val1 <= 0.3 * viewport.height) {
-            setShowItem({ ...showItem, image: true });
+            img1Ref.current.classList.add("imgFull1-animate-specific");
+            img2Ref.current.classList.add("imgFull2-animate-specific");
+            img3Ref.current.classList.add("imgFull3-animate-specific");
         }
         if (val2 <= 0.3 * viewport.height) {
             setShowItem({ ...showItem, text: true });
@@ -90,23 +68,19 @@ export const ProjectDetailsFull = () => {
                     <MemoizedSectionName name="Images"></MemoizedSectionName>
                     <Box className='proj-details-full-image-container'>
                         <Box ref={mark1Ref} className='projFullMark1'></Box>
-                        {showItem.image &&
-                            <>
-                                {(value === 0) ? <Box className='proj-details-full-image-content'>
-                                    <LazyLoadImage src={img1} className='imgFull1' alt='img1'></LazyLoadImage>
-                                    <LazyLoadImage src={img2} className='imgFull2' alt='img2'></LazyLoadImage>
-                                    <LazyLoadImage src={img3} className='imgFull3' alt='img3'></LazyLoadImage>
-                                </Box> : (value === 1) ? <Box className='proj-details-full-image-content'>
-                                    <LazyLoadImage src={img4} className='imgFull1' alt='img1'></LazyLoadImage>
-                                    <LazyLoadImage src={img5} className='imgFull2' alt='img2'></LazyLoadImage>
-                                    <LazyLoadImage src={img6} className='imgFull3' alt='img3'></LazyLoadImage>
-                                </Box> : <Box className='proj-details-full-image-content'>
-                                    <LazyLoadImage src={img7} className='imgFull1' alt='img1'></LazyLoadImage>
-                                    <LazyLoadImage src={img8} className='imgFull2' alt='img2'></LazyLoadImage>
-                                    <LazyLoadImage src={img9} className='imgFull3' alt='img3'></LazyLoadImage>
-                                </Box>}
-                            </>
-                        }
+                        {(value === 0) ? <Box className='proj-details-full-image-content'>
+                            <img src={img1} ref={img1Ref} className='imgFull1' alt='img1'></img>
+                            <img src={img2} ref={img2Ref} className='imgFull2' alt='img2'></img>
+                            <img src={img3} ref={img3Ref} className='imgFull3' alt='img3'></img>
+                        </Box> : (value === 1) ? <Box className='proj-details-full-image-content'>
+                            <img src={img4} ref={img1Ref} className='imgFull1' alt='img1'></img>
+                            <img src={img5} ref={img2Ref} className='imgFull2' alt='img2'></img>
+                            <img src={img6} ref={img3Ref} className='imgFull3' alt='img3'></img>
+                        </Box> : <Box className='proj-details-full-image-content'>
+                            <img src={img7} ref={img1Ref} className='imgFull1' alt='img1'></img>
+                            <img src={img8} ref={img2Ref} className='imgFull2' alt='img2'></img>
+                            <img src={img9} ref={img3Ref} className='imgFull3' alt='img3'></img>
+                        </Box>}
                     </Box>
                     <MemoizedSectionName name="Description"></MemoizedSectionName>
                     <Box className='project-details-full-description-container'>

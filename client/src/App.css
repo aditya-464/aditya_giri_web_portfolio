@@ -363,14 +363,12 @@ html {
 .project-details-content {
     margin-top: 10rem;
     margin-left: 3.6rem;
-    /* border: 2px solid red; */
 }
 
 .project-wrapper-box {
     margin: 0;
     padding: 0;
     margin-bottom: 3.2rem;
-    /* border: 2px solid red; */
 }
 
 .project-title {
@@ -459,7 +457,6 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: 2px solid red; */
 }
 
 @keyframes imageSlide1 {
@@ -510,7 +507,6 @@ html {
     display: flex;
     width: 100%;
     min-height: 80vh;
-    /* border: 2px solid green; */
 }
 
 .project-details-content-right {
@@ -720,26 +716,33 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
-
 
 .proj-details-full-image-content img {
     width: 50rem;
+    transform: translateY(200%);
 }
 
-.imgFull1 {
-    animation: projDetailsFullSLider 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-    animation-delay: 0;
+.imgFull1-animate-specific {
+    transform: translateY(0%) !important;
+    transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+    /* animation: projDetailsFullSLider 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    animation-delay: 0; */
 }
 
-.imgFull2 {
-    animation: projDetailsFullSLider 2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-    animation-delay: 0;
+.imgFull2-animate-specific {
+    transform: translateY(0%) !important;
+    transition: transform 1.5s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+    /* animation: projDetailsFullSLider 2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    animation-delay: 0; */
 }
 
-.imgFull3 {
-    animation: projDetailsFullSLider 2.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-    animation-delay: 0;
+.imgFull3-animate-specific {
+    transform: translateY(0%) !important;
+    transition: transform 2s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+    /* animation: projDetailsFullSLider 2.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    animation-delay: 0; */
 }
 
 .project-details-full-description-container {
@@ -1013,10 +1016,6 @@ html {
 }
 
 
-
-
-
-
 /* Footer */
 
 .footer-container {
@@ -1097,7 +1096,7 @@ html {
     /* Project Details */
 
     .project-details-container {
-        padding: 0 2rem 1rem 14rem;
+        padding: 20rem 2rem 1rem 15rem;
     }
 
     .project-number {
@@ -1110,7 +1109,7 @@ html {
     }
 
     .project-images-container #img1 {
-        width: 65rem;
+        width: 65%;
     }
 
     .text-align-right {
@@ -1119,7 +1118,7 @@ html {
     }
 
     .project-images-container-right #img1 {
-        width: 65rem;
+        width: 65%;
     }
 
 
@@ -1175,7 +1174,7 @@ html {
 }
 
 
-@media only screen and (max-width : 2200px) {
+@media only screen and (min-width:1801px) and (max-width : 2200px) {
     :root {
 
         /* --h0: 108px;
@@ -1198,7 +1197,7 @@ html {
     /* Project Details */
 
     .project-details-container {
-        padding: 0 1rem 1rem 8.4rem;
+        padding: 10rem 1rem 1rem 8.4rem;
     }
 
     .project-number {
@@ -1211,7 +1210,7 @@ html {
     }
 
     .project-images-container #img1 {
-        width: 65rem;
+        width: 65%;
     }
 
     .text-align-right {
@@ -1219,7 +1218,7 @@ html {
     }
 
     .project-images-container-right #img1 {
-        width: 65rem;
+        width: 65%;
     }
 
 
@@ -1260,7 +1259,7 @@ html {
 
 
 
-@media only screen and (max-width : 1800px) {
+@media only screen and (min-width:1401px) and (max-width : 1800px) {
     :root {
 
         --h0: 108px;
@@ -1275,11 +1274,11 @@ html {
     /* Project Details */
 
     .project-details-container {
-        padding: 0 1rem 1rem 6rem;
+        padding: 2rem 1rem 1rem 6rem;
     }
 
     .project-images-container #img1 {
-        width: 50rem;
+        width: 75%;
     }
 
     .text-align-right {
@@ -1287,7 +1286,7 @@ html {
     }
 
     .project-images-container-right #img1 {
-        width: 50rem;
+        width: 75%;
     }
 
 
@@ -1311,7 +1310,7 @@ html {
 
 
 
-@media only screen and (max-width : 1400px) {
+@media only screen and (min-width:1201px) and (max-width : 1400px) {
     :root {
 
         --h0: 50px;
@@ -1328,17 +1327,21 @@ html {
         height: 25rem;
     }
 
+    .project-details-container {
+        padding: 7rem 1rem 1rem 4.8rem;
+    }
+
     .project-details-btn{
         width: 15rem;
         height: 6rem;
     }
 
     .project-images-container #img1 {
-        width: 45rem;
+        width: 75%;
     }
 
     .project-images-container-right #img1 {
-        width: 45rem;
+        width: 75%;
     }
 
 
@@ -1361,7 +1364,7 @@ html {
 
 
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (min-width:992px) and (max-width: 1200px) {
 
     :root {
         /* --h0: 108px;
@@ -1419,13 +1422,16 @@ html {
         height: 6rem;
     }
 
+    .project-details-container {
+        padding: 5rem 1rem 1rem 4.8rem;
+    }
 
     .project-images-container #img1{
-        width: 40rem;
+        width: 75%;
     }
 
     .project-images-container-right #img1{
-        width: 40rem;
+        width: 75%;
     }
 
 
@@ -1462,7 +1468,7 @@ html {
 
 
 
-@media only screen and (max-width : 991px) {
+@media only screen and (min-width:769px) and (max-width : 991px) {
 
     :root {
         /* --h0: 108px;
@@ -1615,7 +1621,7 @@ html {
 
     .project-images-container {
         width: 100%;
-        min-height: 55vh;
+        min-height: 60vh;
         padding: 0 4.8rem;
         overflow: hidden;
         display: flex;
@@ -1625,7 +1631,7 @@ html {
 
    
     .project-images-container #img1 {
-        width: 55rem;
+        width: 70%;
         animation: imageSlide1 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
         animation-delay: 0;
     }
@@ -1666,7 +1672,7 @@ html {
 
     .project-images-container-right {
         width: 100%;
-        min-height: 55vh;
+        min-height: 60vh;
         padding: 0 4.8rem;
         overflow: hidden;
         display: flex;
@@ -1675,7 +1681,7 @@ html {
     }
 
     .project-images-container-right #img1 {
-        width: 55rem;
+        width: 70%;
         animation: imageSlide1 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
         animation-delay: 0;
     }
@@ -1690,51 +1696,40 @@ html {
 
     .proj-details-full-image-content {
         flex-direction: column;
+        overflow: hidden;
     }
 
     .proj-details-full-image-content img {
+        width: 90%;
         margin-top: 2rem;
     }
 
-    @keyframes projDetailsFullSLiderMobL {
-        0% {
-            opacity: 0;
-            transform: translateX(-200%);
-        }
-
-        100% {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-
-    @keyframes projDetailsFullSLiderMobR {
-        0% {
-            opacity: 0;
-            transform: translateX(200%);
-        }
-
-        100% {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-
     .proj-details-full-image-content .imgFull1 {
-        animation: projDetailsFullSLiderMobL 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-        animation-delay: 0;
+        transform: translateX(-200%);
     }
 
     .proj-details-full-image-content .imgFull2 {
-        animation: projDetailsFullSLiderMobR 2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-        animation-delay: 0;
+        transform: translateX(200%);
     }
 
     .proj-details-full-image-content .imgFull3 {
-        animation: projDetailsFullSLiderMobL 2.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-        animation-delay: 0;
+        transform: translateX(-200%);
     }
 
+    .imgFull1-animate-specific {
+        transform: translatex(0%);
+        transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+    }
+
+    .imgFull2-animate-specific {
+        transform: translatex(0%);
+        transition: transform 1.5s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+    }
+
+    .imgFull3-animate-specific {
+        transform: translatex(0%);
+        transition: transform 2s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+    }
 
     .project-details-full-description-container {
         width: 65%;
@@ -1815,7 +1810,7 @@ html {
 
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width:481px) and (max-width: 768px) {
 
     :root {
         /* --h0: 108px;
@@ -1954,7 +1949,7 @@ html {
 
     .project-images-container {
         width: 100%;
-        min-height: 55vh;
+        min-height: 60vh;
         padding: 0 4.8rem;
         overflow: hidden;
         display: flex;
@@ -1963,7 +1958,7 @@ html {
     }
 
     .project-images-container #img1 {
-        width: 45rem;
+        width: 70%;
         animation: imageSlide1 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
         animation-delay: 0;
     }
@@ -2004,7 +1999,7 @@ html {
 
     .project-images-container-right {
         width: 100%;
-        min-height: 55vh;
+        min-height: 60vh;
         padding: 0 4.8rem;
         overflow: hidden;
         display: flex;
@@ -2013,7 +2008,7 @@ html {
     }
 
     .project-images-container-right #img1 {
-        width: 45rem;
+        width: 70%;
         animation: imageSlide1 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
         animation-delay: 0;
     }
@@ -2031,49 +2026,39 @@ html {
 
     .proj-details-full-image-content {
         flex-direction: column;
+        overflow: hidden;
     }
 
     .proj-details-full-image-content img {
+        width: 90%;
         margin-top: 2rem;
     }
 
-    @keyframes projDetailsFullSLiderMobL {
-        0% {
-            opacity: 0;
-            transform: translateX(-200%);
-        }
-
-        100% {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-
-    @keyframes projDetailsFullSLiderMobR {
-        0% {
-            opacity: 0;
-            transform: translateX(200%);
-        }
-
-        100% {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-
     .proj-details-full-image-content .imgFull1 {
-        animation: projDetailsFullSLiderMobL 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-        animation-delay: 0;
+        transform: translateX(-200%);
     }
 
     .proj-details-full-image-content .imgFull2 {
-        animation: projDetailsFullSLiderMobR 2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-        animation-delay: 0;
+        transform: translateX(200%);
     }
 
     .proj-details-full-image-content .imgFull3 {
-        animation: projDetailsFullSLiderMobL 2.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-        animation-delay: 0;
+        transform: translateX(-200%);
+    }
+
+    .imgFull1-animate-specific {
+        transform: translatex(0%);
+        transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+    }
+
+    .imgFull2-animate-specific {
+        transform: translatex(0%);
+        transition: transform 1.5s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+    }
+
+    .imgFull3-animate-specific {
+        transform: translatex(0%);
+        transition: transform 2s cubic-bezier(0.19, 1, 0.22, 1) 0s;
     }
 
     .project-details-full-description-container {
@@ -2283,13 +2268,13 @@ html {
 
     .project-images-container {
         width: 100%;
-        min-height: 55vh;
+        min-height: 60vh;
         padding: 0 1.5rem;
         overflow: hidden;
     }
 
     .project-images-container #img1 {
-        width: 30rem;
+        width: 80%;
         animation: imageSlide1 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
         animation-delay: 0;
     }
@@ -2330,13 +2315,13 @@ html {
 
     .project-images-container-right {
         width: 100%;
-        min-height: 55vh;
+        min-height: 60vh;
         padding: 0 1.5rem;
         overflow: hidden;
     }
 
     .project-images-container-right #img1 {
-        width: 30rem;
+        width: 80%;
         animation: imageSlide1 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
         animation-delay: 0;
     }
@@ -2359,43 +2344,42 @@ html {
 
     .proj-details-full-image-content {
         flex-direction: column;
+        overflow: hidden;
     }
 
     .proj-details-full-image-content img {
+        width: 95%;
         margin-top: 2rem;
     }
 
-    @keyframes projDetailsFullSLiderMobL {
-        0% {
-            opacity: 0;
-            transform: translateX(-200%);
-        }
-
-        100% {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-
-    @keyframes projDetailsFullSLiderMobR {
-        0% {
-            opacity: 0;
-            transform: translateX(200%);
-        }
-
-        100% {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-
-
     .proj-details-full-image-content .imgFull1 {
-        animation: projDetailsFullSLiderMobL 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-        animation-delay: 0;
+        transform: translateX(-200%);
     }
 
     .proj-details-full-image-content .imgFull2 {
+        transform: translateX(200%);
+    }
+
+    .proj-details-full-image-content .imgFull3 {
+        transform: translateX(-200%);
+    }
+
+    .imgFull1-animate-specific {
+        transform: translatex(0%);
+        transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+    }
+
+    .imgFull2-animate-specific {
+        transform: translatex(0%);
+        transition: transform 1.5s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+    }
+
+    .imgFull3-animate-specific {
+        transform: translatex(0%);
+        transition: transform 2s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+    }
+
+    /* .proj-details-full-image-content .imgFull2 {
         animation: projDetailsFullSLiderMobR 2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
         animation-delay: 0;
     }
@@ -2403,7 +2387,7 @@ html {
     .proj-details-full-image-content .imgFull3 {
         animation: projDetailsFullSLiderMobL 2.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
         animation-delay: 0;
-    }
+    } */
 
 
     /* Skills */
