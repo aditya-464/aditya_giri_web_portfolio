@@ -1051,7 +1051,7 @@ html {
 }
 
 
-
+ 
 @media only screen and (min-width:2201px) {
 
     :root {
@@ -1099,6 +1099,10 @@ html {
         padding: 20rem 2rem 1rem 15rem;
     }
 
+    .project-details-outer-container-right .project-details-container{
+        padding: 20rem 15rem 1rem 2rem;
+    }
+
     .project-number {
         margin-top: 5rem;
     }
@@ -1129,11 +1133,15 @@ html {
     }
 
     .proj-details-full-image-content img {
-        width: 70rem;
+        width: 50%;
     }
 
     .project-details-full-description-container {
         width: 60%;
+    }
+
+    .project-details-full-container .project-details-full-back{
+        padding: 3rem 2.5rem;
     }
 
 
@@ -1197,7 +1205,11 @@ html {
     /* Project Details */
 
     .project-details-container {
-        padding: 10rem 1rem 1rem 8.4rem;
+        padding: 10rem 1rem 1rem 12rem;
+    }
+
+    .project-details-outer-container-right .project-details-container{
+        padding: 10rem 12rem 1rem 1rem;
     }
 
     .project-number {
@@ -1257,8 +1269,6 @@ html {
 }
 
 
-
-
 @media only screen and (min-width:1401px) and (max-width : 1800px) {
     :root {
 
@@ -1274,7 +1284,11 @@ html {
     /* Project Details */
 
     .project-details-container {
-        padding: 2rem 1rem 1rem 6rem;
+        padding: 2rem 1rem 1rem 6.4rem;
+    }
+
+    .project-details-outer-container-right .project-details-container{
+        padding: 2rem 6.4rem 1rem 1rem;
     }
 
     .project-images-container #img1 {
@@ -1309,7 +1323,6 @@ html {
 }
 
 
-
 @media only screen and (min-width:1201px) and (max-width : 1400px) {
     :root {
 
@@ -1328,7 +1341,11 @@ html {
     }
 
     .project-details-container {
-        padding: 7rem 1rem 1rem 4.8rem;
+        padding: 7rem 1rem 1rem 6.4rem;
+    }
+
+    .project-details-outer-container-right .project-details-container{
+        padding: 7rem 6.4rem 1rem 1rem;
     }
 
     .project-details-btn{
@@ -1361,8 +1378,6 @@ html {
 
 
 }
-
-
 
 @media only screen and (min-width:992px) and (max-width: 1200px) {
 
@@ -1426,6 +1441,10 @@ html {
         padding: 5rem 1rem 1rem 4.8rem;
     }
 
+    .project-details-outer-container-right .project-details-container{
+        padding: 5rem 4.8rem 1rem 1rem;
+    }
+
     .project-images-container #img1{
         width: 75%;
     }
@@ -1464,8 +1483,6 @@ html {
         height: 12rem;
     }
 }
-
-
 
 
 @media only screen and (min-width:769px) and (max-width : 991px) {
@@ -1809,7 +1826,6 @@ html {
 }
 
 
-
 @media only screen and (min-width:481px) and (max-width: 768px) {
 
     :root {
@@ -2132,8 +2148,6 @@ html {
     }
 
 }
-
-
 
 
 @media only screen and (max-width: 480px) {
