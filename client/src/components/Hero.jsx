@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import heroIcon from "../images/AGhero.svg"
-// import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Box } from '@chakra-ui/react'
 export const Hero = () => {
   const [showItem, setShowItem] = useState(false);
@@ -10,7 +9,7 @@ export const Hero = () => {
   useEffect(() => {
     setTimeout(() => {
       heroFunc(true);
-    }, 100);
+    }, 250);
   }, []);
   return (
     <>

@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom"
-// import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Box, Button, Text } from '@chakra-ui/react'
 import { FaArrowLeft } from "react-icons/fa";
 import img1 from "../images/pap_mob2.jpg"
