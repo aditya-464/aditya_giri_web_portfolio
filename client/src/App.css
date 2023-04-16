@@ -494,16 +494,10 @@ html {
 }
 
 .project-images-container #img1 {
-    animation: imageSlide1 2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    animation: imageSlide1 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
     animation-delay: 0;
 }
 
-.project-images-container #img2 {
-    display: none;
-    animation: imageSlide2 2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-    animation-delay: 0;
-
-}
 
 
 
@@ -604,17 +598,9 @@ html {
 }
 
 .project-images-container-right #img1 {
-    animation: imageSlideRight1 2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    animation: imageSlideRight1 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
     animation-delay: 0;
 }
-
-.project-images-container-right #img2 {
-    display: none;
-    animation: imageSlideRight2 2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-    animation-delay: 0;
-}
-
-
 
 
 
@@ -1622,7 +1608,7 @@ html {
     }
 
     .animate-specific-mobile-text{
-        animation: textSlideMobileView 2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+        animation: textSlideMobileView 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
         animation-delay: 0;
     }
 
@@ -1657,7 +1643,7 @@ html {
    
     .project-images-container #img1 {
         width: 70%;
-        animation: imageSlide1 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+        animation: imageSlide1 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
         animation-delay: 0;
     }
 
@@ -1707,7 +1693,7 @@ html {
 
     .project-images-container-right #img1 {
         width: 70%;
-        animation: imageSlide1 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+        animation: imageSlide1 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
         animation-delay: 0;
     }
 
@@ -1950,7 +1936,7 @@ html {
     }
 
     .animate-specific-mobile-text{
-        animation: textSlideMobileView 2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+        animation: textSlideMobileView 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
         animation-delay: 0;
     }
 
@@ -1983,7 +1969,7 @@ html {
 
     .project-images-container #img1 {
         width: 70%;
-        animation: imageSlide1 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+        animation: imageSlide1 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
         animation-delay: 0;
     }
 
@@ -2033,7 +2019,7 @@ html {
 
     .project-images-container-right #img1 {
         width: 70%;
-        animation: imageSlide1 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+        animation: imageSlide1 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
         animation-delay: 0;
     }
 
@@ -2267,7 +2253,7 @@ html {
     }
 
     .animate-specific-mobile-text{
-        animation: textSlideMobileView 2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+        animation: textSlideMobileView 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
         animation-delay: 0;
     }
 
@@ -2297,7 +2283,7 @@ html {
 
     .project-images-container #img1 {
         width: 80%;
-        animation: imageSlide1 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+        animation: imageSlide1 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
         animation-delay: 0;
     }
 
@@ -2344,7 +2330,7 @@ html {
 
     .project-images-container-right #img1 {
         width: 80%;
-        animation: imageSlide1 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+        animation: imageSlide1 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
         animation-delay: 0;
     }
 
