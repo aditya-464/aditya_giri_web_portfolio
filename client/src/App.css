@@ -308,6 +308,14 @@ html {
     padding-bottom: 10rem;
 }
 
+.project-preload-images-container{
+    display: none;
+}
+
+.project-container .project-preload-images{
+    display: none;
+}
+
 .project-outer-box {
     width: 100%;
     min-height: 100vh;

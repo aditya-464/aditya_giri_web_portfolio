@@ -42,6 +42,11 @@ export const Project = () => {
   return (
     <>
       <Box className='project-container' id='project'>
+        <Box className='project-preload-images-container'>
+          <img className='project-preload-images' src={img1} alt='img1'></img>
+          <img className='project-preload-images' src={img2} alt='img2'></img>
+          <img className='project-preload-images' src={img3} alt='img3'></img>
+        </Box>
         <Box className='project-outer-box'>
           <Box ref={cmp1Ref} className={`markUp mark-1`}></Box>
           {showItems.proj0 && <Box className='project-inner-box'>
