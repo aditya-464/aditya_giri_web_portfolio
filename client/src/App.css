@@ -37,6 +37,9 @@ html {
     scroll-behavior: smooth;
 }
 
+.display-none{
+    display: none;
+}
 
 /* Home Page */
 
