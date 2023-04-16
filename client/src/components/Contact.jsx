@@ -31,12 +31,36 @@ export const Contact = () => {
             return;
         }
         const val1 = contactRef1.current.getBoundingClientRect().top;
-        if (val1 <= 0.35*viewport.height) {
+        if (val1 <= 0.35 * viewport.height) {
             contactFunc(true);
         }
     })
-    const submitData = async (e) => {
+    const validateForm = (e) => {
         e.preventDefault();
+        if (!details.name || !details.email || !details.message) {
+            btnRef.current.style.color = "#FF8080";
+            btnRef.current.value = "Error";
+            setTimeout(() => {
+                btnRef.current.style.color = "#FFE5B4";
+                btnRef.current.value = "Submit";
+            }, 2000);
+        }
+        else {
+            const regEx = /[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,8}(.[a-z{2,8}])?/g;
+            if (regEx.test(details.email)) {
+                submitData();
+            }
+            else {
+                btnRef.current.style.color = "#FF8080";
+                btnRef.current.value = "Error";
+                setTimeout(() => {
+                    btnRef.current.style.color = "#FFE5B4";
+                    btnRef.current.value = "Submit";
+                }, 2000);
+            }
+        }
+    }
+    const submitData = async () => {
         const { name, email, message } = details;
         const res = await fetch("https://agwebportfoliosvr.onrender.com/sendmessage", {
             method: "POST",
@@ -52,20 +76,20 @@ export const Contact = () => {
             setDetails({
                 name: "", email: "", message: ""
             })
-            btnRef.current.style.color = "#66DE93";
+            btnRef.current.style.color = "#97DBAE";
             btnRef.current.value = "Sent";
             setTimeout(() => {
                 btnRef.current.style.color = "#FFE5B4";
                 btnRef.current.value = "Submit";
-            }, 3000);
+            }, 2000);
         }
         else {
-            btnRef.current.style.color = "#F37878";
+            btnRef.current.style.color = "#FF8080";
             btnRef.current.value = "Error";
             setTimeout(() => {
                 btnRef.current.style.color = "#FFE5B4";
                 btnRef.current.value = "Submit";
-            }, 3000);
+            }, 2000);
         }
     }
     return (
@@ -119,8 +143,8 @@ export const Contact = () => {
                                     </Text>
                                     <textarea type="text" name="message" rows="7" cols="10" value={details.message} onChange={handleInputs} required />
                                 </label>
-                                <label className='contact-form-label'>
-                                    <input ref={btnRef} className='contact-form-btn' type="submit" value={btnRef.current.value || "Submit"} onClick={submitData} />
+                                <label className='contact-form-label' onClick={validateForm} >
+                                    <input ref={btnRef} className='contact-form-btn' type="submit" value={btnRef.current.value || "Submit"}/>
                                 </label>
                             </form>}
                         </Box>
